@@ -1,8 +1,12 @@
 # Striver’s SDE Sheet
 
+:white_check_mark: 
+:x:
+:bangbang:
+
 ### Day 1: Arrays
-- https://leetcode.com/problems/set-matrix-zeroes/
-- https://leetcode.com/problems/pascals-triangle/
+- https://leetcode.com/problems/set-matrix-zeroes/ :white_check_mark:
+- https://leetcode.com/problems/pascals-triangle/ :white_check_mark:
 - https://leetcode.com/problems/next-permutation/
 - https://leetcode.com/problems/maximum-subarray/
 - https://leetcode.com/problems/sort-colors/
