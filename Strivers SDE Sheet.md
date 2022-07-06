@@ -14,7 +14,7 @@
 
 ### Day 2: Arrays Part-II
 - https://leetcode.com/problems/rotate-image/ :white_check_mark:
-- https://leetcode.com/problems/merge-intervals/
+- https://leetcode.com/problems/merge-intervals/ :white_check_mark:
 - https://leetcode.com/problems/merge-sorted-array/
 - https://leetcode.com/problems/find-the-duplicate-number/
 - https://www.interviewbit.com/problems/repeat-and-missing-number-array/
