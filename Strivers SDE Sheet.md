@@ -9,8 +9,8 @@
 - https://leetcode.com/problems/pascals-triangle/ :white_check_mark:
 - https://leetcode.com/problems/next-permutation/ [next permutation] :white_check_mark: :bangbang:
 - https://leetcode.com/problems/maximum-subarray/ [kadane's algorithm] :white_check_mark:
-- https://leetcode.com/problems/sort-colors/
-- https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+- https://leetcode.com/problems/sort-colors/ :white_check_mark:
+- https://leetcode.com/problems/best-time-to-buy-and-sell-stock/ :white_check_mark:
 
 ### Day 2: Arrays Part-II
 - https://leetcode.com/problems/rotate-image/
