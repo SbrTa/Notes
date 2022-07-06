@@ -13,7 +13,7 @@
 - https://leetcode.com/problems/best-time-to-buy-and-sell-stock/ :white_check_mark:
 
 ### Day 2: Arrays Part-II
-- https://leetcode.com/problems/rotate-image/
+- https://leetcode.com/problems/rotate-image/ :white_check_mark:
 - https://leetcode.com/problems/merge-intervals/
 - https://leetcode.com/problems/merge-sorted-array/
 - https://leetcode.com/problems/find-the-duplicate-number/
