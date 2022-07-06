@@ -8,7 +8,7 @@
 - https://leetcode.com/problems/set-matrix-zeroes/ :white_check_mark:
 - https://leetcode.com/problems/pascals-triangle/ :white_check_mark:
 - https://leetcode.com/problems/next-permutation/ :white_check_mark: :bangbang:
-- https://leetcode.com/problems/maximum-subarray/
+- https://leetcode.com/problems/maximum-subarray/ :white_check_mark:
 - https://leetcode.com/problems/sort-colors/
 - https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 
