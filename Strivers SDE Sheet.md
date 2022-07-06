@@ -69,7 +69,7 @@
 - https://practice.geeksforgeeks.org/problems/n-meetings-in-one-room-1587115620/1
 
 ### Day 9: Recursion
-- https://leetcode.com/problems/subsets/
+- https://leetcode.com/problems/subsets/ :white_check_mark:
 - https://practice.geeksforgeeks.org/problems/subset-sums2234/1
 - https://leetcode.com/problems/subsets-ii/
 - https://leetcode.com/problems/combination-sum/
