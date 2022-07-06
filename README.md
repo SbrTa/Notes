@@ -5,4 +5,5 @@
 
 ## System design
   - https://www.educative.io/blog/complete-guide-system-design-interview
+  - https://refactoring.guru/design-patterns/strategy/java/example
   
