@@ -126,10 +126,9 @@
 - https://leetcode.com/problems/repeated-string-match/discuss/416144/Rabin-Karp-algorithm-C%2B%2B-implementation :white_check_mark:
 
 ### Day 16: String Part-II
-- https://leetcode.com/problems/implement-strstr/
-- https://leetcode.com/problems/implement-strstr/
+- https://leetcode.com/problems/implement-strstr/ :white_check_mark: [KMP]
 - https://www.interviewbit.com/problems/minimum-characters-required-to-make-a-string-palindromic/
-- https://leetcode.com/problems/valid-anagram/
+- https://leetcode.com/problems/valid-anagram/ :white_check_mark:
 - https://leetcode.com/problems/count-and-say/
 - https://leetcode.com/problems/compare-version-numbers/
 
