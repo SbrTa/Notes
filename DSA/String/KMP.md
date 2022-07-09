@@ -1,6 +1,6 @@
 # KMP
 KMP (Knuth Morris Pratt) algorithm is used to find a "Pattern" in a "Text". This algorithm campares character by character from left to right. 
-But whenever a mismatch occurs, it uses a preprocessed table called "Prefix Table" to skip characters comparison while matching.
+But whenever a mismatch occurs, it uses a preprocessed table called "Prefix Table" to skip characters comparison while matching. **Time Complexity O(n)**
 
 ### Implementation
 ```
