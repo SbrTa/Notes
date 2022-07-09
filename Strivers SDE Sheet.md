@@ -120,10 +120,10 @@
 ### Day 15: String
 - https://leetcode.com/problems/reverse-words-in-a-string/
 - https://leetcode.com/problems/longest-palindromic-substring/
-- https://leetcode.com/problems/roman-to-integer/
-- https://leetcode.com/problems/string-to-integer-atoi/
-- https://leetcode.com/problems/longest-common-prefix/
-- https://leetcode.com/problems/repeated-string-match/discuss/416144/Rabin-Karp-algorithm-C%2B%2B-implementation
+- https://leetcode.com/problems/roman-to-integer/ :white_check_mark:
+- https://leetcode.com/problems/string-to-integer-atoi/ :white_check_mark:
+- https://leetcode.com/problems/longest-common-prefix/ :white_check_mark:
+- https://leetcode.com/problems/repeated-string-match/discuss/416144/Rabin-Karp-algorithm-C%2B%2B-implementation :white_check_mark:
 
 ### Day 16: String Part-II
 - https://leetcode.com/problems/implement-strstr/
