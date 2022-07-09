@@ -86,8 +86,8 @@
 
 ### Day 11: Binary Search
 - https://www.interviewbit.com/problems/matrix-median/
-- https://leetcode.com/problems/single-element-in-a-sorted-array/
-- https://leetcode.com/problems/search-in-rotated-sorted-array/
+- https://leetcode.com/problems/single-element-in-a-sorted-array/ :white_check_mark:
+- https://leetcode.com/problems/search-in-rotated-sorted-array/ :white_check_mark:
 - https://leetcode.com/problems/median-of-two-sorted-arrays/
 - https://practice.geeksforgeeks.org/problems/k-th-element-of-two-sorted-array1317/1
 - https://www.interviewbit.com/problems/allocate-books/
