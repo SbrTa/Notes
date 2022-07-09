@@ -93,3 +93,44 @@
 - https://www.interviewbit.com/problems/allocate-books/
 - https://www.spoj.com/problems/AGGRCOW/
 
+### Day 12: Heaps
+- https://leetcode.com/problems/kth-largest-element-in-an-array/
+- https://www.interviewbit.com/problems/maximum-sum-combinations/
+- https://leetcode.com/problems/find-median-from-data-stream/
+- https://www.codingninjas.com/codestudio/problems/merge-k-sorted-arrays_975379
+- https://leetcode.com/problems/top-k-frequent-elements/
+
+### Day 13: Stack and Queue
+- https://leetcode.com/problems/implement-stack-using-queues/
+- https://leetcode.com/problems/implement-queue-using-stacks/
+- https://leetcode.com/problems/valid-parentheses/
+- https://leetcode.com/problems/next-greater-element-i/
+
+### Day 14: Stack and Queue Part-II
+- https://www.interviewbit.com/problems/nearest-smaller-element/
+- https://leetcode.com/problems/lru-cache/
+- https://leetcode.com/problems/lfu-cache/
+- https://leetcode.com/problems/largest-rectangle-in-histogram/
+- https://leetcode.com/problems/sliding-window-maximum/
+- https://leetcode.com/problems/min-stack/
+- https://leetcode.com/problems/rotting-oranges/
+- https://leetcode.com/problems/online-stock-span/
+- https://leetcode.com/problems/find-the-celebrity/
+
+### Day 15: String
+- https://leetcode.com/problems/reverse-words-in-a-string/
+- https://leetcode.com/problems/longest-palindromic-substring/
+- https://leetcode.com/problems/roman-to-integer/
+- https://leetcode.com/problems/string-to-integer-atoi/
+- https://leetcode.com/problems/longest-common-prefix/
+- https://leetcode.com/problems/repeated-string-match/discuss/416144/Rabin-Karp-algorithm-C%2B%2B-implementation
+
+### Day 16: String Part-II
+- https://leetcode.com/problems/implement-strstr/
+- https://leetcode.com/problems/implement-strstr/
+- https://www.interviewbit.com/problems/minimum-characters-required-to-make-a-string-palindromic/
+- https://leetcode.com/problems/valid-anagram/
+- https://leetcode.com/problems/count-and-say/
+- https://leetcode.com/problems/compare-version-numbers/
+
+
