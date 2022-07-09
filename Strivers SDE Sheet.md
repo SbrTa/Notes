@@ -132,4 +132,43 @@
 - https://leetcode.com/problems/count-and-say/
 - https://leetcode.com/problems/compare-version-numbers/
 
+### Day 17: Binary Tree
+- https://leetcode.com/problems/binary-tree-inorder-traversal/
+- https://leetcode.com/problems/binary-tree-preorder-traversal/
+- https://leetcode.com/problems/binary-tree-postorder-traversal/
+- https://leetcode.com/problems/binary-tree-inorder-traversal/
+- https://practice.geeksforgeeks.org/problems/left-view-of-binary-tree/1
+- https://practice.geeksforgeeks.org/problems/bottom-view-of-binary-tree/1
+- https://practice.geeksforgeeks.org/problems/top-view-of-binary-tree/1
+- https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/
+- https://www.interviewbit.com/problems/path-to-given-node/
+- https://leetcode.com/problems/maximum-width-of-binary-tree/
+
+### Day 18: Binary Tree part-II
+- https://leetcode.com/problems/binary-tree-level-order-traversal/
+- https://leetcode.com/problems/maximum-depth-of-binary-tree/
+- https://leetcode.com/problems/diameter-of-binary-tree/
+- https://leetcode.com/problems/balanced-binary-tree/
+- https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
+- https://leetcode.com/problems/same-tree/
+- https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
+- https://leetcode.com/problems/boundary-of-binary-tree/#
+
+### Day 19: Binary Tree part-III
+- https://leetcode.com/problems/binary-tree-maximum-path-sum/
+- https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
+- https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/
+- https://leetcode.com/problems/symmetric-tree/
+- https://leetcode.com/problems/flatten-binary-tree-to-linked-list/
+- https://practice.geeksforgeeks.org/problems/mirror-tree/1
+
+### Day 20: Binary Search Tree
+- https://leetcode.com/problems/populating-next-right-pointers-in-each-node/
+- https://leetcode.com/problems/search-in-a-binary-search-tree/
+- https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/
+- https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/
+- https://leetcode.com/problems/validate-binary-search-tree/
+- https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
+- https://practice.geeksforgeeks.org/problems/predecessor-and-successor/1
+
 
