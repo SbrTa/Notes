@@ -1,13 +1,7 @@
 # Kruskal
 
 ```
-    struct edge {
-        int u, v, w;
-        bool operator < (const edge & s) const{
-            return w<s.w;
-        }
-    };
-    vector<edge> graph;
+    vector<array<int,3>> graph;
     vector<int> par;
     
     int parent(int n){
@@ -17,13 +11,15 @@
     
     int kruskal(){
         int sum = 0;
-        sort(graph.begin(), graph.end());
+        sort(graph.begin(), graph.end(), [](const array<int,3> &a, const array<int,3> &b){
+            return a[2] < b[2];
+        });
         for(int i=0; i<graph.size(); i++){
-            int u = parent(graph[i].u);
-            int v = parent(graph[i].v);
+            int u = parent(graph[i][0]);
+            int v = parent(graph[i][1]);
             if(u!=v){
                 par[v] = u;
-                sum+=graph[i].w;
+                sum+=graph[i][2];
             }
         }
         return sum;
