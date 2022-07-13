@@ -17,3 +17,16 @@
   - Negetive Weighted graph
   - ```O (NE)```
 
+
+### MST - Prim vs Kruskal
+##### Prim
+  - MST
+  - ```O(E log V)``` with priority queue
+  - ```O(E+V log V)``` with Fibonacci Heap
+
+##### Kruskal
+  - MST
+  - ```O(E log E)```
+
+
+
