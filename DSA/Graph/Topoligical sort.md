@@ -1,6 +1,8 @@
 # Topological sort
 
+
 ```
+    // Kahn’s algorithm -  O( V + E )
     vector<int> topologicalSort(vector<vector<int>> &adj, vector<int> &in){
         vector<int> order;
         queue<int> q;
