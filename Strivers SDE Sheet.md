@@ -15,23 +15,23 @@
 ### Day 2: Arrays Part-II
 - https://leetcode.com/problems/rotate-image/ :white_check_mark:
 - https://leetcode.com/problems/merge-intervals/ :white_check_mark:
-- https://leetcode.com/problems/merge-sorted-array/
+- https://leetcode.com/problems/merge-sorted-array/ :white_check_mark:
 - https://leetcode.com/problems/find-the-duplicate-number/
 - https://www.interviewbit.com/problems/repeat-and-missing-number-array/
 - https://www.codingninjas.com/codestudio/problems/count-inversions_615
 
 ### Day 3: Arrays Part-III
-- https://leetcode.com/problems/search-a-2d-matrix/
+- https://leetcode.com/problems/search-a-2d-matrix/ :white_check_mark:
 - https://leetcode.com/problems/powx-n/
 - https://leetcode.com/problems/majority-element/
 - https://leetcode.com/problems/majority-element-ii/
-- https://leetcode.com/problems/unique-paths/
+- https://leetcode.com/problems/unique-paths/ :white_check_mark:
 - https://leetcode.com/problems/reverse-pairs/
 
 ### Day 4: Arrays Part-IV
-- https://leetcode.com/problems/two-sum/
+- https://leetcode.com/problems/two-sum/ :white_check_mark:
 - https://leetcode.com/problems/4sum/
-- https://leetcode.com/problems/longest-consecutive-sequence/
+- https://leetcode.com/problems/longest-consecutive-sequence/ :white_check_mark:
 - https://practice.geeksforgeeks.org/problems/largest-subarray-with-0-sum/1
 - https://www.interviewbit.com/problems/subarray-with-given-xor/
 - https://leetcode.com/problems/longest-substring-without-repeating-characters/
@@ -42,7 +42,7 @@
 - https://leetcode.com/problems/merge-two-sorted-lists/
 - https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 - https://leetcode.com/problems/add-two-numbers/
-- https://leetcode.com/problems/delete-node-in-a-linked-list/
+- https://leetcode.com/problems/delete-node-in-a-linked-list/ :white_check_mark:
 
 ### Day 6: Linked List Part-II
 - https://practice.geeksforgeeks.org/problems/n-meetings-in-one-room-1587115620/1
