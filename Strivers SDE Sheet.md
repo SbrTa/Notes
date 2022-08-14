@@ -78,7 +78,7 @@
 - https://leetcode.com/problems/permutation-sequence/
 
 ### Day 10: Recursion and Backtracking
-- https://leetcode.com/problems/permutations/
+- https://leetcode.com/problems/permutations/ :white_check_mark:
 - https://leetcode.com/problems/n-queens/
 - https://leetcode.com/problems/sudoku-solver/
 - https://practice.geeksforgeeks.org/problems/m-coloring-problem-1587115620/1#
