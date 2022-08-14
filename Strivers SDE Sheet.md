@@ -172,3 +172,39 @@
 - https://practice.geeksforgeeks.org/problems/predecessor-and-successor/1
 
 
+### Day 23: Graph
+- https://leetcode.com/problems/clone-graph/
+- https://practice.geeksforgeeks.org/problems/depth-first-traversal-for-a-graph/1
+- https://practice.geeksforgeeks.org/problems/bfs-traversal-of-graph/1
+- https://leetcode.com/problems/course-schedule/
+- https://practice.geeksforgeeks.org/problems/topological-sort/1
+- https://leetcode.com/problems/number-of-islands/
+- https://leetcode.com/problems/is-graph-bipartite/
+
+### Day 24: Graph Part-II
+- https://leetcode.com/problems/maximum-number-of-non-overlapping-substrings/discuss/766485/kosaraju-algorithm-on
+- https://practice.geeksforgeeks.org/problems/implementing-dijkstra-set-1-adjacency-matrix/1
+- https://practice.geeksforgeeks.org/problems/distance-from-the-source-bellman-ford-algorithm/0?fbclid=IwAR2_lL0T84DnciLyzMTQuVTMBOi82nTWNLuXjUgahnrtBgkphKiYk6xcyJU
+- https://practice.geeksforgeeks.org/problems/implementing-floyd-warshall2042/1
+- https://practice.geeksforgeeks.org/problems/minimum-spanning-tree/1
+- https://practice.geeksforgeeks.org/problems/minimum-spanning-tree/1
+
+### Day 25: Dynamic Programming
+- https://leetcode.com/problems/maximum-product-subarray/
+- https://leetcode.com/problems/longest-increasing-subsequence/
+- https://leetcode.com/problems/longest-common-subsequence/
+- https://leetcode.com/problems/ones-and-zeroes/
+- https://leetcode.com/problems/edit-distance/
+- https://practice.geeksforgeeks.org/problems/maximum-sum-increasing-subsequence4749/1
+- https://practice.geeksforgeeks.org/problems/matrix-chain-multiplication0303/1
+
+### Day 26: Dynamic Programming Part-II
+- https://leetcode.com/problems/minimum-path-sum/
+- https://leetcode.com/problems/coin-change/
+- https://leetcode.com/problems/partition-equal-subset-sum/
+- https://leetcode.com/problems/minimum-cost-to-cut-a-stick/
+- https://practice.geeksforgeeks.org/problems/egg-dropping-puzzle-1587115620/1
+- https://practice.geeksforgeeks.org/problems/word-break1352/1
+- https://practice.geeksforgeeks.org/problems/palindromic-patitioning4845/1
+- https://practice.geeksforgeeks.org/problems/job-sequencing-problem-1587115620/1
+
