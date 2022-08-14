@@ -101,9 +101,9 @@
 - https://leetcode.com/problems/top-k-frequent-elements/ :white_check_mark:
 
 ### Day 13: Stack and Queue
-- https://leetcode.com/problems/implement-stack-using-queues/
+- https://leetcode.com/problems/implement-stack-using-queues/ :white_check_mark:
 - https://leetcode.com/problems/implement-queue-using-stacks/
-- https://leetcode.com/problems/valid-parentheses/
+- https://leetcode.com/problems/valid-parentheses/ :white_check_mark:
 - https://leetcode.com/problems/next-greater-element-i/
 
 ### Day 14: Stack and Queue Part-II
@@ -112,7 +112,7 @@
 - https://leetcode.com/problems/lfu-cache/
 - https://leetcode.com/problems/largest-rectangle-in-histogram/
 - https://leetcode.com/problems/sliding-window-maximum/
-- https://leetcode.com/problems/min-stack/
+- https://leetcode.com/problems/min-stack/ :white_check_mark:
 - https://leetcode.com/problems/rotting-oranges/
 - https://leetcode.com/problems/online-stock-span/
 - https://leetcode.com/problems/find-the-celebrity/
