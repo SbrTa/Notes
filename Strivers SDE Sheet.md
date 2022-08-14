@@ -94,11 +94,11 @@
 - https://www.spoj.com/problems/AGGRCOW/
 
 ### Day 12: Heaps
-- https://leetcode.com/problems/kth-largest-element-in-an-array/
+- https://leetcode.com/problems/kth-largest-element-in-an-array/ :white_check_mark:
 - https://www.interviewbit.com/problems/maximum-sum-combinations/
-- https://leetcode.com/problems/find-median-from-data-stream/
+- https://leetcode.com/problems/find-median-from-data-stream/ :white_check_mark:
 - https://www.codingninjas.com/codestudio/problems/merge-k-sorted-arrays_975379
-- https://leetcode.com/problems/top-k-frequent-elements/
+- https://leetcode.com/problems/top-k-frequent-elements/ :white_check_mark:
 
 ### Day 13: Stack and Queue
 - https://leetcode.com/problems/implement-stack-using-queues/
