@@ -71,9 +71,9 @@
 ### Day 9: Recursion
 - https://leetcode.com/problems/subsets/ :white_check_mark:
 - https://practice.geeksforgeeks.org/problems/subset-sums2234/1
-- https://leetcode.com/problems/subsets-ii/
-- https://leetcode.com/problems/combination-sum/
-- https://leetcode.com/problems/combination-sum-ii/
+- https://leetcode.com/problems/subsets-ii/ :white_check_mark:
+- https://leetcode.com/problems/combination-sum/ :white_check_mark:
+- https://leetcode.com/problems/combination-sum-ii/ :white_check_mark:
 - https://leetcode.com/problems/palindrome-partitioning/
 - https://leetcode.com/problems/permutation-sequence/
 
