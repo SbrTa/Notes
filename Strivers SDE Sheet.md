@@ -201,7 +201,7 @@
 ### Day 26: Dynamic Programming Part-II
 - https://leetcode.com/problems/minimum-path-sum/
 - https://leetcode.com/problems/coin-change/
-- https://leetcode.com/problems/partition-equal-subset-sum/ :white_check_mark:
+- https://leetcode.com/problems/partition-equal-subset-sum/ 
 - https://leetcode.com/problems/minimum-cost-to-cut-a-stick/
 - https://practice.geeksforgeeks.org/problems/egg-dropping-puzzle-1587115620/1
 - https://practice.geeksforgeeks.org/problems/word-break1352/1
