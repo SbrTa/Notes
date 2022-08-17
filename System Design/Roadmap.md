@@ -1,0 +1,38 @@
+# System Design Roadmap
+
+  - System design basics
+  - Characteristics of distributed system
+  - TCP/IP & DNS
+  - Interaction of Client and Server
+    - REST APIs
+    - Long Polling
+    - Web Sockets
+    - SSE
+  - Database
+    - Sql vs NoSql
+    - Indexing
+    - Replication
+    - Sharding and partitioning
+  - Proxies
+    - Forward proxy
+    - Reverse proxy
+  - Caching
+    - Caching techniques
+    - Popular caching solutions
+    - Distributed cache
+    - CDN
+  - Master-Slave Architecture
+  - Async system
+  - Scalibility
+    - Vertical
+    - Horizontal
+  - Availability
+  - Load balancing
+    - Algorithms
+    - ELB
+  - Consistency
+  - CAP
+  - Consistent Hashing
+  - Rate limiting
+  - Polling and streaming
+  - 
