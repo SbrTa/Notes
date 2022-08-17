@@ -8,11 +8,6 @@
     - Long Polling
     - Web Sockets
     - SSE
-  - Database
-    - Sql vs NoSql
-    - Indexing
-    - Replication
-    - Sharding and partitioning
   - Proxies
     - Forward proxy
     - Reverse proxy
@@ -31,8 +26,12 @@
     - Algorithms
     - ELB
   - Consistency
-  - CAP
+  - CAP theorem
   - Consistent Hashing
   - Rate limiting
   - Polling and streaming
-  - 
+  - Database
+    - Sql vs NoSql
+    - Indexing
+    - Replication
+    - Sharding and partitioning
