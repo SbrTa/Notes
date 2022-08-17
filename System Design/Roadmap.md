@@ -3,7 +3,7 @@
   - System design basics
   - Characteristics of distributed system
   - TCP/IP & DNS
-  - Interaction of Client and Server
+  - Client-Server interaction
     - REST APIs
     - Long Polling
     - Web Sockets
@@ -17,7 +17,7 @@
     - Distributed cache
     - CDN
   - Master-Slave Architecture
-  - Async system
+  - Async system - MQ
   - Scalibility
     - Vertical
     - Horizontal
@@ -27,6 +27,7 @@
     - ELB
   - Consistency
   - CAP theorem
+  - PACELC theorem
   - Consistent Hashing
   - Rate limiting
   - Polling and streaming
@@ -35,3 +36,4 @@
     - Indexing
     - Replication
     - Sharding and partitioning
+  - Analysis of popular systems
