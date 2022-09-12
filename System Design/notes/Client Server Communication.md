@@ -12,3 +12,7 @@ There are multiple technologies involved in the HTTP Push based mechanism such a
   - Long Polling
   - Web Sockets
   - Server Sent Event
+
+
+
+https://medium.com/must-know-computer-science/system-design-client-server-communication-674818ca448d
