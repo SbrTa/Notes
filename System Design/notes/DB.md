@@ -33,3 +33,10 @@ TANSTAAFL - "There ain't no such thing as a free lunch"
 
 Workaround
 - Partial index
+
+
+
+Source:
+- https://www.youtube.com/watch?v=clrtT_4WBAw
+- https://www.youtube.com/watch?v=-qNSXK7s7_w
+- https://www.youtube.com/watch?v=fsG1XaZEa78
