@@ -19,6 +19,14 @@ explain analyse select * from person where first_name = 'Ali' and last_name = 'A
 
 explain analyse select * from person where first_name = 'Ali' or last_name = 'Adams';
 
+create index person_full_name on person(first_name,last_name);
+
+select pg_table_size('person')
+
+select pg_table_size('person_first_name')
+
+select pg_table_size('person_full_name')
+
 ```
 
 Type of scan -
