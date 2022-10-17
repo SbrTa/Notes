@@ -84,6 +84,12 @@ Source:
 - **Match the data store to the pattern of use**. Partitioning allows each partition to be deployed on a different type of data store, based on cost and the built-in features that data store offers. For example, large binary data can be stored in blob storage, while more structured data can be held in a document database. See Choose the right data store.
 - **Improve availability**. Separating data across multiple servers avoids a single point of failure. If one instance fails, only the data in that partition is unavailable. Operations on other partitions can continue. For managed PaaS data stores, this consideration is less relevant, because these services are designed with built-in redundancy.
 
+
+Resources-
+- https://medium.com/must-know-computer-science/system-design-sharding-data-partitioning-b7201596aafa
+- https://learn.microsoft.com/en-us/azure/architecture/best-practices/data-partitioning
+- https://www.enjoyalgorithms.com/blog/data-partitioning-system-design-concept
+
 # Replication
 - Fault taularance 
 - Eliminates single point of failure
