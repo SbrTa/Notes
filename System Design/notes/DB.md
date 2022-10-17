@@ -43,7 +43,11 @@ TANSTAAFL - "There ain't no such thing as a free lunch"
 Workaround
 - Partial index
 
-
+Postgres supports-
+- b tree : balanced binary tree
+- hash table
+- generalised inverse index
+- block range index
 
 Source:
 - https://www.youtube.com/watch?v=clrtT_4WBAw
