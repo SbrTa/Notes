@@ -2,6 +2,7 @@
 
 ## Index
   - Index is basically storage-time trade off
+  - a data structure (B Tree) on top of actual table
   - more storage
   - faster read query, slower write/update query
   - Precalculate data (have to study)
