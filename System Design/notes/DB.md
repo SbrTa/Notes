@@ -1,6 +1,6 @@
 # Database
 
-### Index
+## Index
   - Index is basically storage-time trade off
   - more storage
   - faster read query, slower write/update query
@@ -48,3 +48,17 @@ Source:
 - https://www.youtube.com/watch?v=clrtT_4WBAw
 - https://www.youtube.com/watch?v=-qNSXK7s7_w
 - https://www.youtube.com/watch?v=fsG1XaZEa78
+
+
+
+
+## Replication
+- Fault taularance 
+- Eliminates single point of failure
+- Synchronous vs Asynchronous replication - tradeoff between performane and consistency
+- One directional replication
+- Bi directional replication 
+- Streaming replication
+- Logical replication
+- Statement based replication
+
