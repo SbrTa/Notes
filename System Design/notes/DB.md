@@ -77,6 +77,7 @@ Source:
     - known as **sharding**
 
 ### Why partition
+- Huga data. or rapidly growing data
 - **Improve scalability**. When you scale up a single database system, it will eventually reach a physical hardware limit. If you divide data across multiple partitions, each hosted on a separate server, you can scale out the system almost indefinitely.
 - **Improve performance**. Data access operations on each partition take place over a smaller volume of data. Correctly done, partitioning can make your system more efficient. Operations that affect more than one partition can run in parallel.
 - **Improve security**. In some cases, you can separate sensitive and nonsensitive data into different partitions and apply different security controls to the sensitive data.
@@ -84,6 +85,29 @@ Source:
 - **Match the data store to the pattern of use**. Partitioning allows each partition to be deployed on a different type of data store, based on cost and the built-in features that data store offers. For example, large binary data can be stored in blob storage, while more structured data can be held in a document database. See Choose the right data store.
 - **Improve availability**. Separating data across multiple servers avoids a single point of failure. If one instance fails, only the data in that partition is unavailable. Operations on other partitions can continue. For managed PaaS data stores, this consideration is less relevant, because these services are designed with built-in redundancy.
 
+### What to plan
+- How the data is read 
+- How the data is distributed
+
+### Sharding Architectures
+- Range based sharding
+  - assigns rows to partitions based on column values falling within a given range.
+  - 1st 1k in shard 1, 2nd 1k in shard 2 etc
+- Key Based partioning / hashing
+  - Write a has function
+  - pass the key
+  - hash function selects shard based on the key
+  - lets, you have service in 2 countries. so based on countries you split data into 2 shards
+  - what if you start service in another country?
+  - you have to rewrite the hash
+  - One solution is consistent hashing
+- Range based sharding
+
+### Drawbacks
+ - If your application is bound by read performance, you can add caches or database replicas.
+ - Additional programming and operational complexity
+ - **Rebalancing Data**: you have two shards of a database. One shard store the name of the customers begins with letter A through M. Another shard store the name of the customer begins with the letters N through Z. If there are so many users with the letter L then shard one will have more data than shard two. This will affect the performance (slow down) of the application and it will stall out for a significant portion of your users. The A-M shard will become unbalance and it will be known as database hotspot. To overcome this problem and to rebalance the data you need to do re-sharding for even data distribution. Moving data from one shard to another shard is not a good idea because it requires a lot of downtimes.
+ - **Joining Data From Multiple Shards is Expensive**: in sharded architecture, you need to pull the data from different shards and you need to perform joins across multiple networked servers You can’t submit a single query to get the data from various shards. You need to submit multiple queries for each one of the shards, pull out the data, and join the data across the network. This is going to be a very expensive and time-consuming process. It adds latency to your system.
 
 Resources-
 - https://medium.com/must-know-computer-science/system-design-sharding-data-partitioning-b7201596aafa
