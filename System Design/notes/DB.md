@@ -90,11 +90,11 @@ Source:
 - what types of queries will be routed across shards?
 - how will these shards be maintained?
 
-### Sharding Architectures
-- Range based sharding
+### Sharding strategies
+##### Range based sharding
   - assigns rows to partitions based on column values falling within a given range.
   - 1st 1k in shard 1, 2nd 1k in shard 2 etc
-- Algorithmic / hashing / Key Based partioning
+##### Algorithmic / hashing / Key Based partioning
   - Write a has function
   - pass the key
   - hash function selects shard based on the key
@@ -102,7 +102,12 @@ Source:
   - what if you start service in another country?
   - you have to rewrite the hash
   - One solution is consistent hashing
-- Range based sharding
+##### Lookup strategy / Entity Groups
+Many databases have more expressive querying and manipulation capabilities. Traditional RDBMS features such as joins, indexes and transactions reduce complexity for an application. The concept of entity groups is very simple. Store related entities in the same partition to provide additional capabilities within a single partition. Specifically:
+  - Queries within a single physical shard are efficient.
+  - Stronger consistency semantics can be achieved within a shard.
+
+This is a popular approach to shard a relational database. In a typical web application data is naturally isolated per user. Partitioning by user gives scalability of sharding while retaining most of its flexibility.
 
 ### Drawbacks
  - Additional programming and operational complexity
