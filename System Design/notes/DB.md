@@ -94,7 +94,7 @@ Source:
 - Range based sharding
   - assigns rows to partitions based on column values falling within a given range.
   - 1st 1k in shard 1, 2nd 1k in shard 2 etc
-- Key Based partioning / hashing
+- Algorithmic / hashing / Key Based partioning
   - Write a has function
   - pass the key
   - hash function selects shard based on the key
@@ -103,6 +103,11 @@ Source:
   - you have to rewrite the hash
   - One solution is consistent hashing
 - Range based sharding
+
+### Drawbacks
+ - Additional programming and operational complexity
+ - **Rebalancing Data**: you have two shards of a database. One shard store the name of the customers begins with letter A through M. Another shard store the name of the customer begins with the letters N through Z. If there are so many users with the letter L then shard one will have more data than shard two. This will affect the performance (slow down) of the application and it will stall out for a significant portion of your users. The A-M shard will become unbalance and it will be known as database hotspot. To overcome this problem and to rebalance the data you need to do re-sharding for even data distribution. Moving data from one shard to another shard is not a good idea because it requires a lot of downtimes.
+ - **Joining Data From Multiple Shards is Expensive**: in sharded architecture, you need to pull the data from different shards and you need to perform joins across multiple networked servers You can’t submit a single query to get the data from various shards. You need to submit multiple queries for each one of the shards, pull out the data, and join the data across the network. This is going to be a very expensive and time-consuming process. It adds latency to your system.
 
 ### Do you need database sharding?
 Database sharding, as with any distributed architecture, does not come for free. There is overhead and complexity in setting up shards, maintaining the data on each shard, and properly routing requests across those shards. Before you begin sharding, consider if one of the following alternative solutions will work for you.
@@ -114,12 +119,6 @@ Database sharding, as with any distributed architecture, does not come for free.
   - Analytics or full-text search can be handled by specialized services or a data warehouse.
 - Replication
 - Caching
-
-### Drawbacks
- - If your application is bound by read performance, you can add caches or database replicas.
- - Additional programming and operational complexity
- - **Rebalancing Data**: you have two shards of a database. One shard store the name of the customers begins with letter A through M. Another shard store the name of the customer begins with the letters N through Z. If there are so many users with the letter L then shard one will have more data than shard two. This will affect the performance (slow down) of the application and it will stall out for a significant portion of your users. The A-M shard will become unbalance and it will be known as database hotspot. To overcome this problem and to rebalance the data you need to do re-sharding for even data distribution. Moving data from one shard to another shard is not a good idea because it requires a lot of downtimes.
- - **Joining Data From Multiple Shards is Expensive**: in sharded architecture, you need to pull the data from different shards and you need to perform joins across multiple networked servers You can’t submit a single query to get the data from various shards. You need to submit multiple queries for each one of the shards, pull out the data, and join the data across the network. This is going to be a very expensive and time-consuming process. It adds latency to your system.
 
 Resources-
 - https://medium.com/must-know-computer-science/system-design-sharding-data-partitioning-b7201596aafa
