@@ -85,9 +85,10 @@ Source:
 - **Match the data store to the pattern of use**. Partitioning allows each partition to be deployed on a different type of data store, based on cost and the built-in features that data store offers. For example, large binary data can be stored in blob storage, while more structured data can be held in a document database. See Choose the right data store.
 - **Improve availability**. Separating data across multiple servers avoids a single point of failure. If one instance fails, only the data in that partition is unavailable. Operations on other partitions can continue. For managed PaaS data stores, this consideration is less relevant, because these services are designed with built-in redundancy.
 
-### What to plan
-- How the data is read 
-- How the data is distributed
+### What to consider
+- how will the data be distributed across shards?
+- what types of queries will be routed across shards?
+- how will these shards be maintained?
 
 ### Sharding Architectures
 - Range based sharding
@@ -102,6 +103,17 @@ Source:
   - you have to rewrite the hash
   - One solution is consistent hashing
 - Range based sharding
+
+### Do you need database sharding?
+Database sharding, as with any distributed architecture, does not come for free. There is overhead and complexity in setting up shards, maintaining the data on each shard, and properly routing requests across those shards. Before you begin sharding, consider if one of the following alternative solutions will work for you.
+- query optimization
+- indexing
+- Vertical scaling (server)
+- Specialized services or databases
+  - blob or file storage can be moved directly to a cloud provider such as Amazon S3.
+  - Analytics or full-text search can be handled by specialized services or a data warehouse.
+- Replication
+- Caching
 
 ### Drawbacks
  - If your application is bound by read performance, you can add caches or database replicas.
