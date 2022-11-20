@@ -131,6 +131,12 @@ Resources-
 - https://www.enjoyalgorithms.com/blog/data-partitioning-system-design-concept
 
 # Replication
+
+Advantages
+  - Fault tolerance. If master DB goes down, a replica can take its place.
+  - Reduce latency. Replicas can be placed in different geographical location. So, less network latency.
+  - 
+
 - Fault taularance 
 - Eliminates single point of failure
 - Synchronous vs Asynchronous replication - tradeoff between performane and consistency
@@ -139,6 +145,9 @@ Resources-
 - Streaming replication
 - Logical replication
 - Statement based replication
+
+### Replication lag
+
 
 
 ### MySQL Replication type
