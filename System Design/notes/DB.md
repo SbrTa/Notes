@@ -140,3 +140,22 @@ Resources-
 - Logical replication
 - Statement based replication
 
+
+### MySQL Replication type
+**Statement based replication**
+  - MySQL previously used statement based replication
+  - Just pass the statement to replica and execute it
+  - Require low bandwidth
+  - Costly
+  - For complex statements, the statement must be evaluated and executed on the replica before the rows are updated or inserted. With row-based replication, the replica only has to modify the affected rows, not execute the full statement.
+  - DELETE and UPDATE statements that use a LIMIT clause without an ORDER BY are nondeterministic.
+  - Statements with functions (UUID, SORT, NOW, RAND, DATE, VERSION ...) cannot be replicated properly
+
+**Row based replication**
+  - Row-based replication is the default choice since MySQL 5.7.7
+  - Binary file exchange
+  - Requires more bandwith
+  - Performance improvements with high concurrency queries containing few row changes
+  - Significant data-consistency improvement
+
+
