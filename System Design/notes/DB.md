@@ -134,11 +134,11 @@ Resources-
 
 Advantages
   - Fault tolerance. If master DB goes down, a replica can take its place.
+  - Eliminates single point of failure
   - Reduce latency. Replicas can be placed in different geographical location. So, less network latency.
+  - Responsibility segregation. Master is for writing, replica is for read.
   - 
 
-- Fault taularance 
-- Eliminates single point of failure
 - Synchronous vs Asynchronous replication - tradeoff between performane and consistency
 - One directional replication
 - Bi directional replication 
@@ -147,6 +147,29 @@ Advantages
 - Statement based replication
 
 ### Replication lag
+  - The time it takes the value to copy from master to replica
+
+
+
+
+### Synchronous replication
+  - Read after write
+  - Master sends data to all replica and waits for ack. When all replica sends ack, master comits the changes and return.
+  - Poor performance
+  - If a replica respose late or goes down, write will fail.
+  - Data consistency.
+  - For critical system - banking.
+
+### Asynchronous replication
+  - Background job
+  - Master updated and returns.
+  - Sends data to replica.
+  - Faster
+  - Data inconsistency
+
+### Hybrid / Semi synchronous replication
+  - Master sends data to all replica and wait for 1/2 replica to response
+  - When 1/2 replica sends ack, master returns
 
 
 
@@ -167,4 +190,13 @@ Advantages
   - Performance improvements with high concurrency queries containing few row changes
   - Significant data-consistency improvement
 
+### PostgreSQL load balancer
+  - PG pool
+  - HA proxy
 
+### PostgreSQL Replication type
+**Streaming replication**
+  - Asynchronous by default
+  - 
+
+**Logical Replication**
