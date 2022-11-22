@@ -200,3 +200,32 @@ Advantages
   - 
 
 **Logical Replication**
+
+
+### Replication Architechture
+#### Master-Slave Replication
+**Pros**
+  - Analytic applications can read from the slave(s) without impacting the master
+  - Backups of the entire database of relatively no impact on the master
+  - Slaves can be taken offline and sync back to the master without any downtime
+
+**Cons**
+  - In the instance of a failure, a slave has to be promoted to master to take over its place. No automatic failover
+  - Downtime and possibly loss of data when a master fails
+  - All writes also have to be made to the master in a master-slave design
+  - Each additional slave add some load to the master since the binary log have to be read and data copied to each slave
+  - Application might have to be restarted
+
+#### Master-Master Replication
+**Pros**
+  - Applications can read from both masters
+  - Distributes write load across both master nodes
+  - Simple, automatic and quick failover
+
+**Cons**
+  - Loosely consistent
+  - Not as simple as master-slave to configure and deploy
+
+
+**Split brain problem**
+
