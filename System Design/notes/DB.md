@@ -131,32 +131,24 @@ Resources-
 - https://www.enjoyalgorithms.com/blog/data-partitioning-system-design-concept
 
 # Replication
+Replication is the process of copying data from a central database to one or more databases.
 
-Advantages
-  - Fault tolerance. If master DB goes down, a replica can take its place.
-  - Eliminates single point of failure
-  - Reduce latency. Replicas can be placed in different geographical location. So, less network latency.
+**Why Replicate Database?**
+  - Fault tolerance. If master DB goes down, a replica can take its place. Thus eliminates single point of failure
   - Responsibility segregation. Master is for writing, replica is for read.
-  - 
+  - Improves read performance.
+  - Reduce latency. Replicas can be placed in different geographical location. So, less network latency.
 
-- Synchronous vs Asynchronous replication - tradeoff between performane and consistency
-- One directional replication
-- Bi directional replication 
-- Streaming replication
-- Logical replication
-- Statement based replication
-
-### Replication lag
-  - The time it takes the value to copy from master to replica
-
-
-
+**Replication lag and Consistency issue**
+  - Replication lag - The time it takes the value to copy from master to replica
+  - If lag is 30s, and a read request comes at 10s, read will have old data
+  - So, consistency issue
+  - Data inconsistency not allowed in Mission critical system
 
 ### Synchronous replication
-  - Read after write
   - Master sends data to all replica and waits for ack. When all replica sends ack, master comits the changes and return.
-  - Poor performance
-  - If a replica respose late or goes down, write will fail.
+  - Poor write performance
+  - If a replica response late or goes down, write will fail.
   - Data consistency.
   - For critical system - banking.
 
@@ -169,11 +161,9 @@ Advantages
 
 ### Hybrid / Semi synchronous replication
   - Master sends data to all replica and wait for 1/2 replica to response
-  - When 1/2 replica sends ack, master returns
+  - When 1/2 replica sends ack, master commits
 
-
-
-### MySQL Replication type
+### What to replicate
 **Statement based replication**
   - MySQL previously used statement based replication
   - Just pass the statement to replica and execute it
@@ -190,16 +180,29 @@ Advantages
   - Performance improvements with high concurrency queries containing few row changes
   - Significant data-consistency improvement
 
-### PostgreSQL load balancer
-  - PG pool
-  - HA proxy
-
-### PostgreSQL Replication type
 **Streaming replication**
+  - https://scalegrid.io/blog/comparing-logical-streaming-replication-postgresql/
   - Asynchronous by default
   - 
 
 **Logical Replication**
+
+
+- Synchronous vs Asynchronous replication - tradeoff between performane and consistency
+- One directional replication
+- Bi directional replication 
+- Streaming replication
+- Logical replication
+- Statement based replication
+
+
+
+
+
+### PostgreSQL load balancer
+  - PG pool
+  - HA proxy
+
 
 
 ### Replication Architechture
