@@ -229,3 +229,53 @@ Advantages
 
 **Split brain problem**
 
+
+
+### Replication hands on
+  - https://www.youtube.com/watch?v=Yy0GJjRQcRQ&t=551s
+  - cd replication
+  - terminal 1
+    - initdb -D primary_db
+    - nano primary_db/postgresql.conf 
+      - change listen_addresses = '*'
+      - change port = 5433
+      - ctrl+x
+    - pg_ctl -D primary_db start
+    - psql --port=5433 postgres
+    - create user repuser replication;
+    - \q
+    - nano primary_db/pg_hba.conf
+      - add to IPv4 local connections - ```host    all             repuser             127.0.0.1/32            trust```
+    - pg_ctl -D primary_db restart
+    - pg_basebackup -h localhost -U repuser --checkpoint=fast -D replica_db/ -R --slot=primary_name -C --port=5433
+  - terminal 2
+    - cat postgresql.auto.conf 
+    - nano postgresql.conf
+    - change port=5434
+    - pg_ctl -D replica_db start
+    - select
+  - terminal 1
+    - psql postgres --port=5433
+    - select * from pg_stat_replication;
+  - terminal 2
+    - psql postgres --port=5434
+    - select * from pg_stat_wal_receiver;
+  - terminal 1
+    - create table student(id int, name varchar);
+    - insert into student values (1, 'subrata');
+    - insert into student values (2, 'roy');
+    - select * from student;
+  - terminal 2
+    - select * from student;
+  - terminal 1
+    - delete from student where id = 2;
+    - select * from student;
+  - terminal 2
+    - select * from student;
+
+
+
+
+
+
+  
