@@ -163,7 +163,7 @@ Replication is the process of copying data from a central database to one or mor
   - Master sends data to all replica and wait for 1/2 replica to response
   - When 1/2 replica sends ack, master commits
 
-### What to replicate
+### What to replicate, statement or binary?
 **Statement based replication**
   - MySQL previously used statement based replication
   - Just pass the statement to replica and execute it
@@ -183,9 +183,16 @@ Replication is the process of copying data from a central database to one or mor
 **Streaming replication**
   - https://scalegrid.io/blog/comparing-logical-streaming-replication-postgresql/
   - Asynchronous by default
-  - 
+  - Streams the binary changes to replica
+  - WHat if version change?
 
 **Logical Replication**
+  - Higher level abstraction
+  - Doesn't sync binary
+  - Doesn't sync statement
+  - Sync some command
+  - Version compatible
+
 
 
 - Synchronous vs Asynchronous replication - tradeoff between performane and consistency
@@ -229,8 +236,15 @@ Replication is the process of copying data from a central database to one or mor
   - Auto increment, unique key, guid does not work on db.
   - Split brain problem. Loosely consistent
   - Not as simple as master-slave to configure and deploy
-https://jira.lsstcorp.org/secure/attachment/28014/L1replication.png
 
+BEFORE ending let's discuss CAP theorem
+### CAP Theorem
+A distributed database has three very desirable properties:
+  - Consistency - all node returning the latest valiue of write
+  - Availibility - the data is always accessible for reading and updating even if some node goes down, but don't gurranty latest value
+  - Partition tolerance - keep funcioning even if connection between two node is broken
+
+**Eric Brewer's CAP Theorem** - ```Consistency, availability and partition tolerance are desirable for any distributed system and in such a system having all three properites is nearly impossible. You have to forfeit one of them.```
 
 ### Replication hands on
   - https://www.youtube.com/watch?v=Yy0GJjRQcRQ&t=551s
@@ -242,7 +256,8 @@ https://jira.lsstcorp.org/secure/attachment/28014/L1replication.png
       - change port = 5433
       - ctrl+x
     - pg_ctl -D primary_db start
-    - psql --port=5433 postgres
+    - 
+    
     - create user repuser replication;
     - \q
     - nano primary_db/pg_hba.conf
