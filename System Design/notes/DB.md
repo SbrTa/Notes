@@ -226,12 +226,10 @@ Replication is the process of copying data from a central database to one or mor
   - Simple, automatic and quick failover
 
 **Cons**
-  - Loosely consistent
+  - Auto increment, unique key, guid does not work on db.
+  - Split brain problem. Loosely consistent
   - Not as simple as master-slave to configure and deploy
-
-
-**Split brain problem**
-
+https://jira.lsstcorp.org/secure/attachment/28014/L1replication.png
 
 
 ### Replication hands on
