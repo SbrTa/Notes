@@ -26,7 +26,7 @@
     ```
   - Layers in images
   
-2023-01-18 (02 - Getting Started - [011-0])
+2023-01-18 (02 - Getting Started - [011-020])
   - ```
       docker --help
       docker ps     // all running container
