@@ -62,3 +62,25 @@
       docker run -p 3000:80 --name custom-name image-id //set custom name of container
       docker build -t repository:tag  //repository is general name - app_name, tag is specifier - version_name or latest...
   ```
+
+2023-01-19 (02 - Getting Started - [021-024])
+  - Share source code and dockerfile. reciever will build their own image
+  - Create docker image and share the image
+  - auth
+    ```
+      docker login
+      username
+      password
+    ```
+  - push image to repository
+    ```
+      create repository in docker hub - sbrta/node-hello-world
+      create docker image with same tag - docker build sbrta/node-hello-world .
+      push the image to docker - docker push sbrta/node-hello-world
+    ```
+  - pull images from repository
+    ```
+      docker pull sbrta/node-hello-world // pulls the latest image
+      docker pull sbrta/node-hello-world:tag // pulls image with tag
+      docker run sbrta/node-hello-world // checks image locally. if not found pulls from repository
+    ```
