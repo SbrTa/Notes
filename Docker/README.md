@@ -5,7 +5,7 @@
   - What is Container?
   - Virtual machine vs Docker container.
   
-2023-01-17 (02 - Getting Started - [001-010])
+2023-01-17 (02 - Docker Images & Containers_ The Core Building Blocks - [001-010])
   - What is Docker Image?
   - Docker Image vs Docker Container?
   - ```
@@ -26,7 +26,7 @@
     ```
   - Layers in images
   
-2023-01-18 (02 - Getting Started - [011-020])
+2023-01-18 (02 - Docker Images & Containers_ The Core Building Blocks - [011-020])
   - ```
       docker --help
       docker ps     // all running container
@@ -63,7 +63,7 @@
       docker build -t repository:tag  //repository is general name - app_name, tag is specifier - version_name or latest...
   ```
 
-2023-01-19 (02 - Getting Started - [021-024])
+2023-01-19 (02 - Docker Images & Containers_ The Core Building Blocks - [021-024])
   - Share source code and dockerfile. reciever will build their own image
   - Create docker image and share the image
   - auth
@@ -84,3 +84,19 @@
       docker pull sbrta/node-hello-world:tag // pulls image with tag
       docker run sbrta/node-hello-world // checks image locally. if not found pulls from repository
     ```
+    
+    
+    2023-01-20 - 03 - Managing Data & Working with Volumes - []
+      - all data are associated with the container. if you remove the container, data will also removed
+      - Volume helps persisting data
+      - Volumes are folders on host machine which are mapped into container folder.
+      - Changes in either folder will be reflected into the other folder
+      - So even if container is removed, data will be stored in host machines volume
+      - Annonymous volumed are closely attached to container. Gets deleted with container
+      - Named volume doesn't gets deleted if we delete container
+      - cmd
+        ```
+          -v local-volume-name:docker-dir
+          docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback feedback-app
+          docker volume ls
+        ```
