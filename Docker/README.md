@@ -94,8 +94,8 @@
   - Annonymous volumed are closely attached to container. Gets deleted with container
   - Named volume doesn't gets deleted if we delete container
   - cmd
-        ```
-          -v local-volume-name:docker-dir
-          docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback feedback-app
-          docker volume ls
-        ```
+    ```
+      -v local-volume-name:docker-dir
+      docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback feedback-app
+      docker volume ls
+    ```
