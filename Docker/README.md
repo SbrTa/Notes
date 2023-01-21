@@ -60,7 +60,7 @@
   - image tag and container name
   ```
       docker run -p 3000:80 --name custom-name image-id //set custom name of container
-      docker build -t repository:tag  //repository is general name - app_name, tag is specifier - version_name or latest...
+      docker build -t repository:tag  //repository is general name - app_name, tag is specifier - version_name or latest
   ```
 
 ### 2023-01-19 - 02 - Docker Images & Containers_ The Core Building Blocks - [021-024]
@@ -86,14 +86,14 @@
     ```
     
 ### 2023-01-20 - 03 - Managing Data & Working with Volumes - [001 - 010]
-      - all data are associated with the container. if you remove the container, data will also removed
-      - Volume helps persisting data
-      - Volumes are folders on host machine which are mapped into container folder.
-      - Changes in either folder will be reflected into the other folder
-      - So even if container is removed, data will be stored in host machines volume
-      - Annonymous volumed are closely attached to container. Gets deleted with container
-      - Named volume doesn't gets deleted if we delete container
-      - cmd
+  - all data are associated with the container. if you remove the container, data will also removed
+  - Volume helps persisting data
+  - Volumes are folders on host machine which are mapped into container folder.
+  - Changes in either folder will be reflected into the other folder
+  - So even if container is removed, data will be stored in host machines volume
+  - Annonymous volumed are closely attached to container. Gets deleted with container
+  - Named volume doesn't gets deleted if we delete container
+  - cmd
         ```
           -v local-volume-name:docker-dir
           docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback feedback-app
