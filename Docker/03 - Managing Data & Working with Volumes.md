@@ -32,7 +32,7 @@
   - Allow bind mount directory to access by docker
     ```Docker Desktop > Preferences > Resources > File Sharing > Add Directory``` 
   - ```-v absolute-path:docker-path```
-  - ```docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback -v "/Users/subrata/Desktop/Docker/002-005-A:/app" feedback-app-image```
+  - ```docker run -d -p 3000:80 --name feedback-app -v feedback:/app/feedback -v "/Users/subrata/Desktop/Docker/002-005-A:/app" feedback-app-image```
   - This command will fail because node_moudules dir in local dir will overwrite docker container dir
   - In that case we can add node_module as annonymous volume
-  - ```docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback -v "/Users/subrata/Desktop/Docker/002-005-A:/app" -v /app/node_modules feedback-app-image```
+  - ```docker run -d -p 3000:80 --name feedback-app -v feedback:/app/feedback -v "/Users/subrata/Desktop/Docker/002-005-A:/app" -v /app/node_modules feedback-app-image```
