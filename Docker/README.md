@@ -1,6 +1,6 @@
 # Docker
 
-## Docker & Kubernetes: The Practical Guide (Udemy) - Maximilian Schwarzmüller
+## Docker & Kubernetes: The Practical Guide (Udemy) - Maximilian Schwarzmüller [23h 30m]
 
 ### 01 - Getting Started [1h 10m]
   - 2023-01-16 :: [001-015]
