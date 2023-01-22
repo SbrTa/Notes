@@ -44,6 +44,7 @@
   - Survive container shutdow, restart and also removal of container
   - Can be shared data accross multiple container
   - Can be re-use
+  - Ideal for codebase directory. Updating code no need to build new image.
   - Allow bind mount directory to access by docker
     ```Docker Desktop > Preferences > Resources > File Sharing > Add Directory``` 
   - ```-v absolute-path:docker-path```
@@ -51,3 +52,22 @@
   - This command will fail because node_moudules dir in local dir will overwrite docker container dir
   - In that case we can add node_module as annonymous volume
   - ```docker run -d -p 3000:80 --name feedback-app -v feedback:/app/feedback -v "/Users/subrata/Desktop/Docker/003-003-A:/app" -v /app/node_modules feedback-app-image```
+  - By default volumes and bind mounts are bi-synchrounous. Every change in local machine will propagate to docker and vise versa.
+  - So, for source code directory docker container should not change local dir.
+  - Volumes can be declared as read only ```local-dir:container-dir:ro```
+  - ```docker run -d -p 3000:80 --name feedback-app -v feedback:/app/feedback -v "/Users/subrata/Desktop/Docker/003-003-A:/app:ro" -v /app/node_modules feedback-app-image```
+
+
+### Good read
+  - Why we need ```COPY . .``` when we are using bind mount?
+    - If we use bind mount, COPY is not required. But we use bind mounts only for development purposes. So when we deploy the image without bind mount, it will fail.
+  - .dockerignore
+    - COPY . . copies all the files including node_modules and some other files we don't need to copy. So to ignore those files, we can add them to .dockerignore file / folder.
+  - ENVironment Variables
+    - Add ```ENV Name Value```
+    - We can update environment variable when running container with ```--env NAME:VALUE```
+    - Environment variables are accessed by the application
+    - Environment variables can be set in some other files. ```.env-dev```. When running the container we have to select the environment file with ```--env-file ./.env-dev```
+  - ARGuments
+    -
+  - 
