@@ -1,4 +1,5 @@
 # Managing Data & Working with Volumes 
+  - Container can read and write data to local machine via volume and bind mount
   - All data are associated with the container. if you remove the container, data will also removed
   - Annonymous volume - ```docker run -v /app/data ...```
   - Named volume - ```docker run -v name:/app/data ...```
@@ -64,10 +65,16 @@
   - .dockerignore
     - COPY . . copies all the files including node_modules and some other files we don't need to copy. So to ignore those files, we can add them to .dockerignore file / folder.
   - ENVironment Variables
-    - Add ```ENV Name Value```
+    - Pass certain piece of data from outside to container
+    - Add ```ENV Name Value``` to **Dockerfile**
     - We can update environment variable when running container with ```--env NAME:VALUE```
     - Environment variables are accessed by the application
     - Environment variables can be set in some other files. ```.env-dev```. When running the container we have to select the environment file with ```--env-file ./.env-dev```
-  - ARGuments
-    -
-  - 
+  - Build ARGuments
+    - Pass certain piece of data from outside to container
+    - Add ```ARG Name = Value``` to **Dockerfile**
+    - Arguments can not be used in code 
+    - Can be used in Dockerfile, but not in CMD
+    - Can be used when running container to overwrite the default argument. ``` --build-arg NAME=VALUE```
+    - It can be useful to have same images for multiple container with different arguments.
+    - Server port can be a good example to set in ARG
