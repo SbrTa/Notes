@@ -18,11 +18,11 @@
 ### 04 - Networking (Cross) Container Communication [51m] [001 - 012]
   - 2023-01-23 :: [001 - 012]
 
-### 05 - Building Multi-Container Applications with Docker [1h 20m]
+### 05 - Building Multi-Container Applications with Docker [1h 20m] [001 - 010]
 
-### 06 - Docker Compose: Elegant Multi-Container Orchestration [58m]
+### 06 - Docker Compose: Elegant Multi-Container Orchestration [58m] [001 - 010]
 
-### 07 - Working with Utility Containers & Executing Commands In Containers [30m]
+### 07 - Working with Utility Containers & Executing Commands In Containers [30m] [001 - 008]
 
 ### 08 - A More Complex Setup: A Laravel & PHP Dockerized Project [1h 17m]
 
