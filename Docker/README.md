@@ -2,20 +2,21 @@
 
 ## Docker & Kubernetes: The Practical Guide (Udemy) - Maximilian Schwarzmüller [23h 30m]
 
-### 01 - Getting Started [1h 10m]
+### 01 - Getting Started [1h 10m] [001-015]
   - 2023-01-16 :: [001-015]
 
-### 02 - Docker Images & Containers: The Core Building Blocks [2h 17m]
+### 02 - Docker Images & Containers: The Core Building Blocks [2h 17m] [001-024]
   - 2023-01-17 :: [001-010]
   - 2023-01-18 :: [011-020]
   - 2023-01-19 :: [021-024]
 
-### 03 - Managing Data & Working with Volumes [1h 57m]
+### 03 - Managing Data & Working with Volumes [1h 57m] [001 - 023]
   - 2023-01-20 :: [001 - 009]
   - 2023-01-21 :: [010 - 014]
   - 2023-01-22 :: [015 - 023]
 
-### 04 - Networking (Cross) Container Communication [51m]
+### 04 - Networking (Cross) Container Communication [51m] [001 - 012]
+  - 2023-01-23 :: [001 - 012]
 
 ### 05 - Building Multi-Container Applications with Docker [1h 20m]
 
