@@ -19,6 +19,7 @@
   - 2023-01-23 :: [001 - 012]
 
 ### 05 - Building Multi-Container Applications with Docker [1h 20m] [001 - 010]
+  - 2023-01-24 :: [001 - 006]
 
 ### 06 - Docker Compose: Elegant Multi-Container Orchestration [58m] [001 - 010]
 
