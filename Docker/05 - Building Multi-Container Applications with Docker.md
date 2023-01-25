@@ -56,4 +56,10 @@
   - DONE
 
 
-Code: https://github.com/SbrTa/Notes/blob/main/Docker/code/005-A.zip
+### Room for improvement
+  - Long docker run command. It would be great if we don't have to remember/save them and run them separately.
+  - Development only setup. Not optimized for production. Shouldn't be executed like this on a production server.
+
+
+### Code
+  - https://github.com/SbrTa/Notes/blob/main/Docker/code/005-A.zip
