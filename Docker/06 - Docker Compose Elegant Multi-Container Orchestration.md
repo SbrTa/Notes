@@ -11,6 +11,7 @@
       docker-compose up -d --build
       docker-compose down
     ```
+  - Demo project: https://github.com/SbrTa/Notes/blob/main/Docker/code/006-A.zip
   - Here is the docker compose file for the demo project
     ```
       version: '3.8'
