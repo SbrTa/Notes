@@ -27,6 +27,7 @@
   - 2023-01-27 :: [001 - 010]
 
 ### 07 - Working with Utility Containers & Executing Commands In Containers [30m] [001 - 008]
+  - 2023-01-27 :: [001 - 008]
 
 ### 08 - A More Complex Setup: A Laravel & PHP Dockerized Project [1h 17m]
 
