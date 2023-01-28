@@ -23,11 +23,11 @@
   - 2023-01-25 :: [007 - 010]
   
 ### 06 - Docker Compose: Elegant Multi-Container Orchestration [58m] [001 - 010]
-  - 2023-01-26 :: ABSENT
+  - 2023-01-26 ::  ---------
   - 2023-01-27 :: [001 - 010]
 
 ### 07 - Working with Utility Containers & Executing Commands In Containers [30m] [001 - 008]
-  - 2023-01-27 :: [001 - 008]
+  - 2023-01-28 :: [001 - 008]
 
 ### 08 - A More Complex Setup: A Laravel & PHP Dockerized Project [1h 17m]
 
