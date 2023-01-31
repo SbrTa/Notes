@@ -29,7 +29,11 @@
 ### 07 - Working with Utility Containers & Executing Commands In Containers [30m] [001 - 008]  [->](https://github.com/SbrTa/Notes/blob/main/Docker/07%20-%20Working%20with%20Utility%20Containers%20%26%20Executing%20Commands%20In%20Containers.md)
   - 2023-01-28 :: [001 - 008]
 
-### 08 - A More Complex Setup: A Laravel & PHP Dockerized Project [1h 17m]
+### 08 - A More Complex Setup: A Laravel & PHP Dockerized Project [1h 17m] [001-012]
+  - 2023-01-28 ::  ---------
+  - 2023-01-29 ::  ---------
+  - 2023-01-30 ::  ---------
+  - 2023-01-31 :: [001 - 002]
 
 ### 09 - Deploying Docker Containers [3h 54m]
 
