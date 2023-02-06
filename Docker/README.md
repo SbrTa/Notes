@@ -36,7 +36,10 @@
   - 2023-01-31 :: [001 - 002]
   - 2023-02-01 :: [003 - 012]
 
-### 09 - Deploying Docker Containers [3h 54m]
+### 09 - Deploying Docker Containers [3h 54m] [001 - 037]
+  - 2023-02-03 :: [001 - 005]
+  - 2023-02-06 :: [006 - 018]
+
 
 ### 10 - Docker & Containers - A Summary [18m]
 
