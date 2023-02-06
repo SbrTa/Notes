@@ -1,7 +1,9 @@
 # Deploying Docker Containers
   - Bind mounts shoudn't be used in production
+  - Multicontainer projects might need to be split
+  - Trade offs between control and responsibility
 
-### Production deployment
+### Production deployment (Manually)
   - Create image on locale machine
   - Push it to Docker repository, ie - Dockerhub
   - Install and run docker in server
@@ -13,3 +15,9 @@
     - Pull from server
     - Re run container
     
+### AWS ECS (Elastic Container Service)
+  - Container defination
+  - Task defination
+  - Service
+  - Cluster
+
