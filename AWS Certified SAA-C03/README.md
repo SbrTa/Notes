@@ -7,4 +7,4 @@
 ## 03. Identity and Access Management (IAM)
   - 2023-02-07 [All]
 ## 04. Simple Storage Service (S3)
-  - 
+  - 2023-02-09 [till s3 storage class]
