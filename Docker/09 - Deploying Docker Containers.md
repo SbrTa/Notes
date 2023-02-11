@@ -2,6 +2,7 @@
   - Bind mounts shoudn't be used in production
   - Multicontainer projects might need to be split
   - Trade offs between control and responsibility
+  - Docker compose is not great for production deployment
 
 ### Production deployment (Manually)
   - Create image on locale machine
