@@ -10,5 +10,5 @@ _"Defining a familly of algorithms, encapsulating each one, and make them interc
   - Easy to find and fix bugs
 
 #### Disadvantages
-  - Lots of code
+  - Lots of file
 
