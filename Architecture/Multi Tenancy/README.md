@@ -6,3 +6,7 @@ Dynamic Multi Tenancy with Spring Boot:
   - https://callistaenterprise.se/blogg/teknik/2020/10/17/multi-tenancy-with-spring-boot-part5/
   - https://callistaenterprise.se/blogg/teknik/2020/10/24/multi-tenancy-with-spring-boot-part6/
   - https://callistaenterprise.se/blogg/teknik/2022/03/26/multi-tenancy-with-spring-boot-part7/
+
+More on RLS
+  - https://www.thenile.dev/blog/multi-tenant-rls
+  - 
