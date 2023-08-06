@@ -51,3 +51,9 @@ That means the implementation and the client should be loosely coupled in order 
   9. Template Pattern
   10. Visitor Pattern
   11. Null Object
+
+
+### Resources
+Resources
+  - https://github.com/pdichone/JavaDesignPatterns/tree/master
+  - 
