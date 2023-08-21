@@ -17,9 +17,9 @@ Creational design patterns are concerned with the way of creating objects. These
 be made at the time of instantiation of a class (i.e. creating an object of a class).
   1. Factory Pattern
   2. Abstract Factory Pattern
-  3. Singleton Pattern
+  3. Builder Pattern
   4. Prototype Pattern
-  5. Builder Pattern
+  5. Singleton Pattern
 
 ### Structural Design Pattern
 
