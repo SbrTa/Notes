@@ -22,7 +22,11 @@
   - https://www.youtube.com/watch?v=WlMTxHcm4Qs&ab_channel=ByteMonk
 
 
+![image](https://github.com/SbrTa/Notes/assets/8649145/29411608-21ad-452a-8d50-5e8b7c28424f)
 
+![image](https://github.com/SbrTa/Notes/assets/8649145/81526571-9541-428a-8a33-77ee4064e3c2)
+
+![image](https://github.com/SbrTa/Notes/assets/8649145/81f78378-feaa-44ec-ae64-808fb2375a4d)
 
 ![image](https://github.com/SbrTa/Notes/assets/8649145/9275b49c-c12e-4f45-903b-37886f3a2561)
 
