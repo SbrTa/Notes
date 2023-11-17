@@ -1,7 +1,4 @@
-# Springboot Interview Question
-
-
-## Spring
+# Spring Interview Questions
 
 ✅ What is Loose Coupling?
 
