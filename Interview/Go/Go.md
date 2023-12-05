@@ -11,8 +11,25 @@
   - Go is a case-sensitive language.
 
 
-#### ✅ 
-#### ✅ 
+#### ✅ What are Golang pointers?
+Go Pointers are those variables that hold the address of any variables. Due to this, they are called special variables. Pointers support two operators:
+  - *operator: This operator is called a dereferencing operator and is used for accessing the value in the address stored by the pointer.
+  - &operator: This operator is called the address operator and is used for returning the address of the variable stored in the pointer.
+
+
+#### ✅ Is it possible to return multiple values from a function in Go?
+Yes. Multiple values can be returned in Golang by sending comma-separated values with the return statement and by assigning it to multiple variables in a single statement as shown in the example below:
+
+```
+func reverseValues(a,b string)(string, string){
+    return b,a
+}
+
+func main(){
+    val1,val2:= reverseValues("abc","def")
+}
+```
+
 #### ✅ 
 #### ✅  
 #### ✅  
