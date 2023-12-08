@@ -102,8 +102,19 @@ Atomicity is also known as the ‘All or nothing rule’.
 ![image](https://github.com/SbrTa/Notes/assets/8649145/71a9614d-beea-4f05-92b2-91c87755f800)
 
 
-#### ✅ 
-#### ✅ 
+#### ✅ What is Data Warehousing?
+The process of collecting, extracting, transforming, and loading data from multiple sources and storing them in one database is known as data warehousing. A data warehouse can be considered as a central repository where data flows from transactional systems and other relational databases and is used for data analytics. A data warehouse comprises a wide variety of an organization’s historical data that supports the decision-making process in an organization.
+
+![image](https://github.com/SbrTa/Notes/assets/8649145/e63d1340-57e6-4e63-b5a0-375c5a12bfaa)
+
+
+#### ✅ What is a lock. Explain the major difference between a shared lock and an exclusive lock during a transaction in a database.
+A database lock is a mechanism to protect a shared piece of data from getting updated by two or more database users at the same time. When a single database user or session has acquired a lock then no other database user or session can modify that data until the lock is released.
+
+**Exclusive locks**: The exclusive locks are useful in DML operations like INSERT, UPDATE, or DELETE statements. This lock, when imposed on a transaction, prevents other persons from accessing the locked resources. It means that an exclusive lock can hold only one transaction on a resource at the same time. The user of this lock is known as a writer. This lock is imposed when the transaction wants to modify the page or row data. It can only be held by the page or row when there is no other shared or exclusive lock hold on the target.
+
+**Shared Locks**: Once the shared locks are applied on the page or row, they will be reserved for reading-only purposes. It implies that no other transaction can alter the locked resource as long as the lock is active. As the name implies, several transactions can hold this lock on the same resource simultaneously. The user of this lock is known as a reader. In addition, this lock will also allow write operations, but no DDL changes will be permitted.
+
 #### ✅ 
 #### ✅ 
 #### ✅ 
