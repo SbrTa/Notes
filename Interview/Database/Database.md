@@ -155,7 +155,17 @@ SNAPSHOT isolation specifies that data read within a transaction will never refl
 
 ![image](https://github.com/SbrTa/Notes/assets/8649145/3f1a1bc1-ca00-4d81-a9cf-207510006d67)
 
-#### ✅ 
+#### ✅ What is deadlock in database and how it can be resolved?
+Deadlock occurs when two or more transactions are waiting for each other to release resources, such as locks on database objects, that they need to complete their operations. As a result, none of the transactions can proceed, leading to a situation where they are stuck or “deadlocked.”
+
+Resolution of Deadlocks:
+  - **Timeouts**: Set a timeout for transactions. If a transaction cannot acquire all the necessary locks within a specified time, it will be rolled back. This approach helps to break deadlocks, but it may also lead to the loss of work.
+  - **Lock Hierarchy**: Establish a hierarchy for acquiring locks. If transactions follow a predefined order when acquiring locks, the likelihood of deadlocks can be reduced.
+  - **Two-Phase Locking Protocol**: Enforce a two-phase locking protocol where a transaction must acquire all the locks it needs before it can release any. This helps to prevent circular wait conditions, a common cause of deadlocks.
+  - **Avoidance**: Use a method to determine whether a transaction should wait for a lock based on an analysis of the potential for a deadlock. This requires careful planning and understanding of transaction requirements.
+  - **Deadlock Detection and Resolution**: Periodically check for deadlocks and, if detected, choose one or more transactions to be rolled back. The decision on which transaction to roll back may involve factors like the transaction's priority or the amount of work done.
+  - **Resource Allocation Graph**: Use a resource allocation graph to represent the relationships between transactions and resources. Periodically check the graph for cycles, which indicate deadlocks, and take appropriate action.
+
 #### ✅ 
 #### ✅ 
 #### ✅ 
