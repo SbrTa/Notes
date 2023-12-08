@@ -1,17 +1,44 @@
 # devinterview.io API Design 50
 
-API Design Fundamentals
 
-1. What is an API and what are its main purposes?
-2. Can you explain the difference between an API and a Web service?
-3. What are the principles of a RESTful API?
-4. How does a SOAP API differ from a REST API?
-5. What is an API endpoint?
-6. What are the common methods (HTTP verbs) used in a REST API, and what does each method do?
-7. How do you version an API?
-8. What is idempotence in the context of API design, and why is it important?
-9. Can you explain what API rate limiting is and give an example of why it might be used?
-10. Describe the concept of OAuth in relation to API security.
+# API Design Fundamentals
+
+#### ✅ 1. What is an API and what are its main purposes?
+**Answer:** An API (Application Programming Interface) is a set of protocols, tools, and definitions that allows different software applications to communicate with each other. Its main purposes include enabling the integration of different systems, allowing them to access and use each other's functionalities or data.
+
+#### ✅ 2. Can you explain the difference between an API and a Web service?
+**Answer:** An API is a broader term that encompasses any set of protocols for communication between software applications. A web service, on the other hand, specifically refers to APIs that are accessible over the web using standard protocols like HTTP. All web services are APIs, but not all APIs are necessarily web services.
+
+#### ✅ 3. What are the principles of a RESTful API?
+**Answer:** RESTful APIs follow the principles of Representational State Transfer (REST). Key principles include statelessness, where each request from a client contains all the information needed to understand and process the request; a uniform interface for simplicity and consistency; and the use of standard HTTP methods (GET, POST, PUT, DELETE) for different operations.
+
+#### ✅ 4. How does a SOAP API differ from a REST API?
+**Answer:** SOAP (Simple Object Access Protocol) and REST (Representational State Transfer) are two different approaches to building APIs. SOAP is a protocol with strict standards and uses XML for message formatting, while REST is an architectural style that uses standard HTTP methods and typically relies on JSON for data interchange. SOAP APIs tend to be more rigid, while REST APIs are often more flexible and scalable.
+
+#### ✅ 5. What is an API endpoint?
+**Answer:** An API endpoint is a specific URL or URI (Uniform Resource Identifier) where an API can be accessed. It represents a specific function or resource in the API. For example, in a RESTful API, different endpoints might correspond to different CRUD (Create, Read, Update, Delete) operations on a resource.
+
+#### ✅ 6. What are the common methods (HTTP verbs) used in a REST API, and what does each method do?
+**Answer:** Common HTTP methods in a REST API include:
+- **GET:** Retrieve data.
+- **POST:** Create new data.
+- **PUT:** Update existing data.
+- **DELETE:** Delete data.
+- **PATCH:** Partially update data.
+These methods correspond to CRUD operations on resources.
+
+#### ✅ 7. How do you version an API?
+**Answer:** API versioning is typically achieved by including the version number in the API's URI or header. Common approaches include using the URI path (e.g., `/v1/resource`) or the request header (e.g., `Accept: application/vnd.myapi.v1+json`). Versioning helps manage changes in the API while maintaining backward compatibility.
+
+#### ✅ 8. What is idempotence in the context of API design, and why is it important?
+**Answer:** Idempotence means that making the same request multiple times produces the same result as making it once. In API design, it ensures that repeating a request doesn't have unintended side effects. For example, a DELETE request should be idempotent – deleting a resource once or multiple times has the same outcome, preventing accidental data corruption.
+
+#### ✅ 9. Can you explain what API rate limiting is and give an example of why it might be used?
+**Answer:** API rate limiting is a technique to control the number of requests a client can make to an API within a specified time frame. It helps prevent abuse, ensures fair usage, and maintains API performance. For example, an API might limit a client to 100 requests per minute to prevent excessive usage and avoid overloading the server.
+
+#### ✅ 10. Describe the concept of OAuth in relation to API security.
+**Answer:** OAuth (Open Authorization) is an authentication and authorization protocol used to secure API access. It allows a client application to access a resource on behalf of a user without exposing the user's credentials. OAuth involves obtaining an access token, which the client includes in API requests. This token represents the user's consent and permissions.
+
 
 API Design Best Practices
 
