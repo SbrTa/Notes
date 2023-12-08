@@ -115,8 +115,46 @@ A database lock is a mechanism to protect a shared piece of data from getting up
 
 **Shared Locks**: Once the shared locks are applied on the page or row, they will be reserved for reading-only purposes. It implies that no other transaction can alter the locked resource as long as the lock is active. As the name implies, several transactions can hold this lock on the same resource simultaneously. The user of this lock is known as a reader. In addition, this lock will also allow write operations, but no DDL changes will be permitted.
 
-#### ✅ 
-#### ✅ 
+#### ✅ SQL join
+A JOIN clause is used to combine rows from two or more tables, based on a related column between them.
+
+Here are the different types of the JOINs in SQL:
+  - **(INNER) JOIN**: Returns records that have matching values in both tables
+  - **LEFT (OUTER) JOIN**: Returns all records from the left table, and the matched records from the right table
+  - **RIGHT (OUTER) JOIN**: Returns all records from the right table, and the matched records from the left table
+  - **FULL (OUTER) JOIN**: Returns all records when there is a match in either left or right table
+
+More on - https://www.geeksforgeeks.org/sql-join-set-1-inner-left-right-and-full-joins/
+
+
+#### ✅ Explain database transaction isolation levels.
+Database transaction isolation levels define the degree to which one transaction must be isolated from the effects of other concurrent transactions. These levels ensure the consistency and integrity of the database during concurrent access.
+
+Transaction isolation level is defined by the following phenomena
+  - **Dirty Reads**
+    - A transaction reads data written by a concurrent uncommitted transaction.
+    - For example, Let’s say transaction 1 updates a row and leaves it uncommitted, meanwhile, Transaction 2 reads the updated row. If transaction 1 rolls back the change, transaction 2 will have read data that is considered never to have existed.
+  - **Non-Repeatable Reads, and Read Skew**
+    - A transaction re-reads data it has previously read and finds that data has been modified by another transaction.
+    - For example, suppose transaction T1 reads data. Due to concurrency, another transaction T2 updates the same data and commit, Now if transaction T1 rereads the same data, it will retrieve a different value.
+  - **Phantom Reads**
+    - A transaction re-executes a query returning a set of rows that satisfy a search condition and finds that the set of rows satisfying the condition has changed due to another recently-committed transaction.
+    - For example, suppose transaction T1 retrieves a set of rows that satisfy some search criteria. Now, Transaction T2 generates some new rows that match the search criteria for transaction T1. If transaction T1 re-executes the statement that reads the rows, it gets a different set of rows this time.
+
+
+
+Based on these phenomena, There are four SQL standard isolation levels:
+  - **Read Uncommitted** – Read Uncommitted is the lowest isolation level. At this level, makes sure no transaction can update a database row if another transaction has already updated it and not committed. This protects against lost updates, but won’t stand in a way of dirty reads
+  - **Read Committed** – This isolation level does not allow any other transaction to write or read a row to which another transaction has written to but not yet committed. Thus it does not allows dirty read. The transaction holds a read or write lock on the current row, and thus prevents other transactions from reading, updating, or deleting it.
+  - **Repeatable Read** – This isolation level makes sure any transaction that reads data from a row blocks any other writing transactions from accessing the same row. This is the most restrictive isolation level that holds read locks on all rows it references and writes locks on all rows it inserts, updates, or deletes. Since other transactions cannot read, update or delete these rows, consequently it avoids non-repeatable read.
+  - **Serializable** – This isolation level is the highest isolation level. serializable isolation level requires a lot more than restricting access to a single row. Typically this isolation mode would lock the whole table, to prevent any other transactions from inserting or reading data from it. Serializable execution is defined to be an execution of operations in which concurrently executing transactions appears to be serially executing.
+
+**SNAPSHOT**: SQL Server introduced extensions to the SQL-92 standard isolation levels with the introduction of the SNAPSHOT isolation level.
+
+SNAPSHOT isolation specifies that data read within a transaction will never reflect changes made by other simultaneous transactions. The transaction uses the data row versions that exist when the transaction begins. No locks are placed on the data when it is read, so SNAPSHOT transactions do not block other transactions from writing data. Transactions that write data do not block snapshot transactions from reading data. You need to enable snapshot isolation by setting the ALLOW_SNAPSHOT_ISOLATION database option in order to use it.
+
+![image](https://github.com/SbrTa/Notes/assets/8649145/3f1a1bc1-ca00-4d81-a9cf-207510006d67)
+
 #### ✅ 
 #### ✅ 
 #### ✅ 
