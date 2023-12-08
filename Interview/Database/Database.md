@@ -27,6 +27,12 @@ There most commonly used normal forms are:
   - **Boyce & Codd Normal Form (BCNF)**
     - 3NF
     - For each functional dependency ( X → Y ), X should be a Super Key.
+  - **Fourth Normal Form (4NF)**
+    - BCNF
+    - Tables cannot have multi-valued dependencies on a Primary Key.
+  - **Fifth Normal Form (5NF)**
+    - 4NF
+    - A composite key shouldn't have any cyclic dependencies.
 
 #### ✅ Partial Dependency?
 When a table has a primary key that is made up of two or more columns, then all the columns(not included in the primary key) in that table should depend on the entire primary key and not on a part of it. If any column(which is not in the primary key) depends on a part of the primary key then we say we have Partial dependency in the table.
