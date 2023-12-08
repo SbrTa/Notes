@@ -166,9 +166,53 @@ Resolution of Deadlocks:
   - **Deadlock Detection and Resolution**: Periodically check for deadlocks and, if detected, choose one or more transactions to be rolled back. The decision on which transaction to roll back may involve factors like the transaction's priority or the amount of work done.
   - **Resource Allocation Graph**: Use a resource allocation graph to represent the relationships between transactions and resources. Periodically check the graph for cycles, which indicate deadlocks, and take appropriate action.
 
-#### ✅ 
-#### ✅ 
-#### ✅ 
+#### ✅ Optimistic and Pessimistic locking
+**Optimistic locking**:
+The optimistic locking model, also referred to as optimistic concurrency control, is a concurrency control method used in relational databases that does not use record locking. Optimistic locking allows multiple users to attempt to update the same record without informing the users that others are also attempting to update the record. The record changes are validated only when the record is committed. If one user successfully updates the record, the other users attempting to commit their concurrent updates are informed that a conflict exists.
+
+An advantage of the optimistic locking model is that it avoids the overhead of locking a record for the duration of the action. If there are no simultaneous updates, then this model provides fast updates.
+
+Optimistic locking is a useful approach when concurrent record updates are expected to be infrequent or the locking overhead is high. In the Rational ClearQuest implementation of optimistic locking, when multiple users edit a record concurrently, after one user's changes are committed, the other users' changes are rejected and data conflicts must be saved and manually merged.
+
+**Pessimistic locking**:
+The pessimistic locking model prevents simultaneous updates to records. As soon as one user starts to update a record, a lock is placed on it. Other users who attempt to update this record are informed that another user has an update in progress. The other users must wait until the first user has finished committing their changes, thereby releasing the record lock. Only then can another user make changes based on the previous user's changes.
+
+An advantage of the pessimistic locking model is that it avoids the issue of conflict resolution by preventing conflicts. Updates are serialized and each subsequent update starts with the committed record changes from the previous user.
+
+Pessimistic locking is a useful approach when subsequent updates can be delayed until a previous update is completed. This usually implies that updates occur in a short time interval.
+
+#### ✅ How does a database ensures consistency during concurrent transaction?
+
+A database ensures consistency during concurrent transactions through various mechanisms and isolation levels that control the interactions between transactions. The goal is to maintain the ACID properties (Atomicity, Consistency, Isolation, Durability) even when multiple transactions are executing simultaneously. Here's how a database achieves consistency during concurrent transactions:
+
+**Transactions:**
+A transaction is a unit of work that represents a sequence of one or more operations. Transactions are executed atomically, meaning they are either completed in their entirety or not at all. This ensures that the database remains in a consistent state.
+
+**Isolation Levels:**
+Isolation levels define the degree to which one transaction must be isolated from the effects of other concurrent transactions. The different isolation levels (Read Uncommitted, Read Committed, Repeatable Read, Serializable) provide varying levels of consistency and isolation.
+
+**Locking Mechanisms:**
+Databases use locking mechanisms to control access to data and prevent conflicts. When a transaction wants to read or modify a piece of data, it must acquire a lock on that data. This ensures that only one transaction at a time can modify a particular data item.
+
+**Concurrency Control:**
+Concurrency control mechanisms ensure that transactions can execute concurrently without compromising data consistency. Two commonly used concurrency control techniques are optimistic concurrency control and pessimistic concurrency control.
+  - Optimistic Concurrency Control
+  - Pessimistic Concurrency Control
+
+**Transaction Isolation:**
+  - The isolation property of transactions ensures that the intermediate state of a transaction is not visible to other transactions until the transaction is committed. This prevents uncommitted changes from affecting other transactions and maintains a consistent view of the database.
+
+**Serializability:**
+  - Serializability is a key concept in database consistency. It ensures that the execution of a set of concurrent transactions is equivalent to some serial execution of those transactions. In other words, even though transactions may execute concurrently, the end result is as if they were executed one after the other.
+
+**Rollback and Undo Mechanisms:**
+  - If a transaction encounters an error or if a conflict arises during execution, the database can roll back the transaction to its previous state. Undo mechanisms are used to reverse the effects of partially completed transactions.
+
+
+#### ✅ What is a savepoint in a database transaction?
+A savepoint is a named entity that represents the state of data and schemas at a particular point within a unit of work. You can create savepoints within a transaction. If the transaction rolls back, changes are undone to the specified savepoint, rather than to the beginning of the transaction.
+
+
 #### ✅ 
 #### ✅ 
 #### ✅ 
