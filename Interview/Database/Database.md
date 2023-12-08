@@ -40,8 +40,9 @@ When a table has a primary key that is made up of two or more columns, then all 
 #### ✅ What is Transitive Dependency?
 In a table we have some column that acts as the primary key and other columns depends on this column. But what if a column that is not the primary key depends on another column that is also not a primary key or part of it? Then we have Transitive dependency in our table.
 
+#### ✅ What is Multi-valued Dependency?
+If For a dependency A → B, if for a single value of A, multiple value of B exists, then the table may have multi-valued dependency.
 
-#### ✅ 
 #### ✅ 
 #### ✅ 
 #### ✅ 
