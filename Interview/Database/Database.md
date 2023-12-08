@@ -60,7 +60,48 @@ Atomicity is also known as the ‘All or nothing rule’.
 **DURABILITY**: Once the transaction has completed execution, the updates and modifications to the database are stored in and written to disk and they persist even if a system failure occurs. These updates now become permanent and are stored in non-volatile memory. The effects of the transaction, thus, are never lost. 
 
 
-#### ✅ 
+#### ✅ Keys is database.
+**Candidate Key**: The minimal set of attributes that can uniquely identify a tuple is known as a candidate key.
+  - It is a minimal super key.
+  - It is a super key with no repeated data is called a candidate key.
+  - The minimal set of attributes that can uniquely identify a record.
+  - It must contain unique values.
+  - It can contain NULL values.
+  - Every table must have at least a single candidate key.
+  - A table can have multiple candidate keys but only one primary key.
+  - The value of the Candidate Key is unique and may be null for a tuple.
+  - There can be more than one candidate key in a relationship. 
+
+**Super Key**: The set of attributes that can uniquely identify a tuple is known as Super Key.
+  - Adding zero or more attributes to the candidate key generates the super key.
+  - A candidate key is a super key but vice versa is not true.
+  - Super Key values may also be NULL.
+
+**Primary Key**: There can be more than one candidate key in relation out of which one can be chosen as the primary key.
+  - It is a unique key.
+  - It can identify only one tuple (a record) at a time.
+  - It has no duplicate values, it has unique values.
+  - It cannot be NULL.
+  - Primary keys are not necessarily to be a single column; more than one column can also be a primary key for a table.
+
+![image](https://github.com/SbrTa/Notes/assets/8649145/bfd8eab1-c3be-4e55-9717-439b7e01f582)
+
+**Alternate Key**: The candidate key other than the primary key is called an alternate key.
+  - All the keys which are not primary keys are called alternate keys.
+  - It is a secondary key.
+  - It contains two or more fields to identify two or more records.
+  - These values are repeated.
+
+**Composite Key**: Sometimes, a table might not have a single column/attribute that uniquely identifies all the records of a table. To uniquely identify rows of a table, a combination of two or more columns/attributes can be used.  It still can give duplicate values in rare cases. So, we need to find the optimal set of attributes that can uniquely identify rows in a table.
+  - It acts as a primary key if there is no primary key in a table
+  - Two or more attributes are used together to make a composite key.
+  - Different combinations of attributes may give different accuracy in terms of identifying the rows uniquely.
+
+**Foreign key**: The Foreign key is a primary key from one table, which has a relationship with another table. It acts as a cross-reference between tables.
+
+![image](https://github.com/SbrTa/Notes/assets/8649145/71a9614d-beea-4f05-92b2-91c87755f800)
+
+
 #### ✅ 
 #### ✅ 
 #### ✅ 
