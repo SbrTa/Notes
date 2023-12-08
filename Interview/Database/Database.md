@@ -43,7 +43,23 @@ In a table we have some column that acts as the primary key and other columns de
 #### ✅ What is Multi-valued Dependency?
 If For a dependency A → B, if for a single value of A, multiple value of B exists, then the table may have multi-valued dependency.
 
-#### ✅ 
+
+#### ✅ Explain ACID properties
+ACID properties are some basic rules, which has to be satisfied by every transaction to preserve the integrity. These properties and rules are:
+
+**ATOMICITY**: The entire transaction takes place at once or doesn’t happen at all. There is no midway i.e. transactions do not occur partially. Each transaction is considered as one unit and either runs to completion or is not executed at all. It involves the following two operations. 
+  - Abort: If a transaction aborts, changes made to the database are not visible. 
+  - Commit: If a transaction commits, changes made are visible. 
+
+Atomicity is also known as the ‘All or nothing rule’. 
+
+**CONSISTENCY**: Integrity constraints must be maintained so that the database is consistent before and after the transaction. It refers to the correctness of a database.
+
+**ISOLATION**: Multiple transactions can occur concurrently without leading to the inconsistency of the database state. Transactions occur independently without interference. Changes occurring in a particular transaction will not be visible to any other transaction until that particular change in that transaction is written to memory or has been committed. This property ensures that the execution of transactions concurrently will result in a state that is equivalent to a state achieved these were executed serially in some order. 
+
+**DURABILITY**: Once the transaction has completed execution, the updates and modifications to the database are stored in and written to disk and they persist even if a system failure occurs. These updates now become permanent and are stored in non-volatile memory. The effects of the transaction, thus, are never lost. 
+
+
 #### ✅ 
 #### ✅ 
 #### ✅ 
