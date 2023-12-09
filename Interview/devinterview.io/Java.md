@@ -689,10 +689,75 @@ Annotations in frameworks enhance readability, reduce boilerplate code, and allo
 
 # Database Connectivity
 
-72. What is JDBC, and how do you connect to a database in Java?
-73. Explain the role of the DriverManager class in JDBC.
-74. How do you handle transactions in JDBC?
-75. What is a PreparedStatement, and how does it prevent SQL injection?
+#### ✅ 72. What is JDBC, and how do you connect to a database in Java?
+**Answer:**
+- **JDBC (Java Database Connectivity):**
+  - JDBC is a Java API that allows Java applications to interact with relational databases.
+  - It provides a standard interface for connecting to databases, executing SQL queries, and processing results.
+
+- **Connecting to a Database in Java:**
+  - Use the following steps:
+    1. **Load the JDBC driver:** `Class.forName("com.mysql.cj.jdbc.Driver");`
+    2. **Establish a connection:** `Connection connection = DriverManager.getConnection(url, username, password);`
+
+#### ✅ 73. Explain the role of the DriverManager class in JDBC.
+**Answer:**
+- **Role of `DriverManager` in JDBC:**
+  - `DriverManager` is a class in JDBC that manages a list of database drivers.
+  - It is responsible for opening a connection to a database by selecting an appropriate driver from the list.
+  - The `getConnection` method of `DriverManager` is used to establish a connection to a database.
+
+#### ✅ 74. How do you handle transactions in JDBC?
+**Answer:**
+- **Handling Transactions in JDBC:**
+  - Use the following steps:
+    1. **Disable auto-commit:** `connection.setAutoCommit(false);`
+    2. **Execute SQL statements within the transaction.**
+    3. **Commit the transaction:** `connection.commit();`
+    4. **Rollback if an error occurs:** `connection.rollback();`
+
+- Example:
+  ```java
+  try {
+      connection.setAutoCommit(false);
+      // Execute SQL statements
+      connection.commit();
+  } catch (SQLException e) {
+      connection.rollback();
+      e.printStackTrace();
+  } finally {
+      connection.setAutoCommit(true);
+  }
+  ```
+  
+#### ✅ 75. What is a PreparedStatement, and how does it prevent SQL injection?
+**Answer:**
+
+**PreparedStatement in JDBC:**
+PreparedStatement is a feature in JDBC that allows precompilation of SQL queries with placeholders for parameters.
+It inherits from the Statement interface and extends its functionality.
+SQL queries with placeholders can be executed multiple times with different parameter values.
+
+**Preventing SQL Injection:**
+One of the main advantages of PreparedStatement is its ability to prevent SQL injection attacks.
+SQL injection occurs when an attacker inserts malicious SQL code into input fields to manipulate the SQL query.
+PreparedStatement automatically escapes and quotes the parameter values, making it immune to SQL injection attacks.
+Example:
+
+```java
+String sql = "SELECT * FROM users WHERE username = ? AND password = ?";
+try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+    preparedStatement.setString(1, enteredUsername);
+    preparedStatement.setString(2, enteredPassword);
+    ResultSet resultSet = preparedStatement.executeQuery();
+    // Process the result
+}
+```
+
+In this example, the ? placeholders are used, and values are set using the setString method. This ensures that the values are treated as data and not executable SQL code, preventing SQL injection.
+
+Using PreparedStatement is considered a best practice for executing parameterized SQL queries in Java to enhance security and prevent SQL injection vulnerabilities.
+
 
 # Testing in Java
 
