@@ -227,37 +227,217 @@
 
 # Java Collections Framework
 
-24. Describe the Collections framework in Java.
-25. What are the main differences between a List, Set, and Map in Java?
-26. How does a HashSet work internally in Java?
-27. Can you explain the difference between Comparable and Comparator interfaces?
-28. What is the difference between HashMap and Hashtable?
-29. What is the significance of equals() and hashCode() methods in Java?
-30. What are the advantages of using Generics in collections?
-31. How can we make a collection thread-safe in Java?
-32. What are concurrent collections, and why do we use them?
+#### ✅ 24. Describe the Collections framework in Java.
+**Answer:**
+- **Collections Framework:**
+  - A unified architecture for representing and manipulating collections of objects.
+  - Includes interfaces like `List`, `Set`, `Map`, and their implementations.
+  - Provides algorithms to manipulate data structures independently of their implementations.
+
+#### ✅ 25. What are the main differences between a List, Set, and Map in Java?
+**Answer:**
+- **List:**
+  - Ordered collection with duplicates allowed.
+  - Access elements by index.
+
+- **Set:**
+  - Unordered collection with no duplicates.
+  - No indexing.
+
+- **Map:**
+  - Key-value pairs; no duplicates allowed.
+  - Access elements by key.
+
+#### ✅ 26. How does a HashSet work internally in Java?
+**Answer:**
+- **HashSet:**
+  - Uses a hash table for storage.
+  - Elements are stored based on their hash codes.
+  - Provides constant-time performance for basic operations.
+
+#### ✅ 27. Can you explain the difference between Comparable and Comparator interfaces?
+**Answer:**
+- **Comparable:**
+  - Objects of the class implement the `Comparable` interface.
+  - Provides a natural ordering.
+  - Uses the `compareTo` method.
+
+- **Comparator:**
+  - Separate class or logic to compare objects.
+  - Provides multiple sorting sequences.
+  - Uses the `compare` method.
+
+#### ✅ 28. What is the difference between HashMap and Hashtable?
+**Answer:**
+- **HashMap:**
+  - Non-synchronized; not thread-safe.
+  - Allows null values and one null key.
+  - Iterators are fail-fast.
+
+- **Hashtable:**
+  - Synchronized; thread-safe.
+  - Does not allow null values or keys.
+  - Enumeration is the only iterator.
+
+#### ✅ 29. What is the significance of equals() and hashCode() methods in Java?
+**Answer:**
+- **equals():**
+  - Compares the content of objects.
+  - Must be overridden for custom classes.
+
+- **hashCode():**
+  - Returns a unique integer for each object.
+  - Used in hash-based collections.
+  - Must be consistent with `equals()`.
+
+#### ✅ 30. What are the advantages of using Generics in collections?
+**Answer:**
+- **Advantages:**
+  - Type safety: Ensures type compatibility at compile time.
+  - Code reusability: Write generic algorithms that work with different data types.
+
+#### ✅ 31. How can we make a collection thread-safe in Java?
+**Answer:**
+- **Making a Collection Thread-safe:**
+  - Use `Collections.synchronizedList`, `Collections.synchronizedSet`, etc.
+  - Use concurrent collections from the `java.util.concurrent` package.
+
+#### ✅ 32. What are concurrent collections, and why do we use them?
+**Answer:**
+- **Concurrent Collections:**
+  - Part of the `java.util.concurrent` package.
+  - Designed for use in multithreaded environments.
+  - Provide better performance and safety in concurrent scenarios.
+
 
 # Exceptions and Error Handling
 
-33. What is the difference between an error and an exception in Java?
-34. Can you explain Java's exception hierarchy?
-35. What is the difference between checked and unchecked exceptions?
-36. How do you handle exceptions in Java?
-37. What is a finally block, and when is it used?
-38. Is it possible to catch multiple exceptions in a single catch block? If yes, how?
-39. Can you throw any exception inside a lambda expression in Java?
+#### ✅ 33. What is the difference between an error and an exception in Java?
+**Answer:**
+- **Error:**
+  - Indicates serious problems that a reasonable application should not try to catch.
+  - Examples: `OutOfMemoryError`, `StackOverflowError`.
+
+- **Exception:**
+  - Represents exceptional conditions that a well-written application should anticipate and recover from.
+  - Examples: `IOException`, `NullPointerException`.
+
+#### ✅ 34. Can you explain Java's exception hierarchy?
+**Answer:**
+- **Exception Hierarchy:**
+  - All exceptions and errors are subclasses of the `Throwable` class.
+  - Two main subclasses: `Error` and `Exception`.
+  - `Exception` further divides into checked and unchecked exceptions.
+
+#### ✅ 35. What is the difference between checked and unchecked exceptions?
+**Answer:**
+- **Checked Exceptions:**
+  - Checked at compile-time.
+  - Include exceptions that extend `Exception` but not `RuntimeException`.
+  - Examples: `IOException`, `ClassNotFoundException`.
+
+- **Unchecked Exceptions:**
+  - Not checked at compile-time.
+  - Include exceptions that extend `RuntimeException`.
+  - Examples: `NullPointerException`, `ArrayIndexOutOfBoundsException`.
+
+#### ✅ 36. How do you handle exceptions in Java?
+**Answer:**
+- **Handling Exceptions:**
+  - Use `try`, `catch`, `finally` blocks.
+  - Enclose risky code in the `try` block.
+  - Provide exception-handling logic in the `catch` block.
+  - `finally` block is executed regardless of whether an exception occurs or not.
+
+#### ✅ 37. What is a finally block, and when is it used?
+**Answer:**
+- **finally Block:**
+  - Used to ensure that a block of code is always executed, whether an exception is thrown or not.
+  - Typically used for cleanup operations like closing resources.
+
+#### ✅ 38. Is it possible to catch multiple exceptions in a single catch block? If yes, how?
+**Answer:**
+- **Multiple Exceptions in a Single Catch Block:**
+  - Yes, you can catch multiple exceptions by separating them with the `|` (pipe) symbol.
+  - Example: `catch (IOException | SQLException ex) { ... }`.
+
+#### ✅ 39. Can you throw any exception inside a lambda expression in Java?
+**Answer:**
+- **Throwing Exceptions in Lambda Expressions:**
+  - Lambda expressions can throw exceptions.
+  - The exceptions thrown by a lambda expression must be compatible with the functional interface's `throws` clause.
+
 
 # Java Concurrency
 
-40. What is the difference between a process and a thread in Java?
-41. How do you create a thread in Java?
-42. Explain the concept of synchronization in context with threads.
-43. What is deadlocking in multithreading?
-44. How can you avoid deadlocks?
-45. Can you explain the working of the volatile keyword?
-46. What is the difference between the synchronized method and synchronized block?
-47. How does the 'wait' and 'notify' mechanism work in Java's Object class?
-48. What are Executors in Java concurrency?
+#### ✅ 40. What is the difference between a process and a thread in Java?
+**Answer:**
+- **Process:**
+  - An independent program with its memory space and resources.
+  - Processes do not share memory space.
+  - Overheads are higher, and communication between processes is more complex.
+
+- **Thread:**
+  - Smallest unit of execution within a process.
+  - Threads within the same process share the same memory space.
+  - Lightweight compared to processes, with lower overhead.
+
+#### ✅ 41. How do you create a thread in Java?
+**Answer:**
+- **Creating a Thread:**
+  - Extending the `Thread` class.
+  - Implementing the `Runnable` interface.
+  - Using Java's Executor framework.
+
+#### ✅ 42. Explain the concept of synchronization in context with threads.
+**Answer:**
+- **Synchronization:**
+  - Ensures that only one thread can access a shared resource at a time.
+  - Prevents data corruption due to simultaneous access.
+  - Achieved using the `synchronized` keyword or using `Lock` interfaces.
+
+#### ✅ 43. What is deadlocking in multithreading?
+**Answer:**
+- **Deadlock:**
+  - Occurs when two or more threads are blocked forever, each waiting for the other to release a lock.
+  - A situation where a set of processes are blocked because each process is holding a resource and waiting for another resource acquired by some other process.
+
+#### ✅ 44. How can you avoid deadlocks?
+**Answer:**
+- **Avoiding Deadlocks:**
+  - Lock ordering: Acquire locks in a consistent order.
+  - Lock timeout: Release a lock if not acquired within a specified time.
+  - Use higher-level concurrency utilities from the `java.util.concurrent` package.
+
+#### ✅ 45. Can you explain the working of the volatile keyword?
+**Answer:**
+- **Volatile Keyword:**
+  - Ensures visibility of changes to variables across threads.
+  - Prevents thread caching of variables.
+  - Useful for flags or variables accessed by multiple threads without other synchronization mechanisms.
+
+#### ✅ 46. What is the difference between the synchronized method and synchronized block?
+**Answer:**
+- **Synchronized Method vs. Synchronized Block:**
+  - **Method:** Entire method is synchronized.
+  - **Block:** Only the specified block of code is synchronized.
+  - Using synchronized blocks allows more fine-grained control over synchronization.
+
+#### ✅ 47. How does the 'wait' and 'notify' mechanism work in Java's Object class?
+**Answer:**
+- **wait() and notify():**
+  - Used for inter-thread communication.
+  - `wait()`: Causes the current thread to wait until another thread invokes `notify()` or `notifyAll()` for the object.
+  - `notify()`: Wakes up one of the threads that are currently waiting on the object.
+
+#### ✅ 48. What are Executors in Java concurrency?
+**Answer:**
+- **Executors:**
+  - Part of the Java Concurrency framework.
+  - Simplify the process of managing and controlling threads.
+  - Provides a higher-level replacement for managing threads manually.
+  - Examples include `ExecutorService`, `ScheduledExecutorService`.
+
 
 # Java 8 and Newer Features
 
