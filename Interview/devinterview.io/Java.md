@@ -441,21 +441,118 @@
 
 # Java 8 and Newer Features
 
-49. Can you explain lambda expressions in Java 8?
-50. How do default methods in interfaces work?
-51. What is a stream in Java 8, and how is it different from a collection?
-52. Explain the function of the Optional class in Java.
-53. What are method references in Java 8?
-54. How does the Java module system work?
-55. What new features were introduced in Java 9, Java 10, Java 11, and beyond?
+#### ✅ 49. Can you explain lambda expressions in Java 8?
+**Answer:**
+- **Lambda Expressions:**
+  - Introduced in Java 8 to provide a concise way to represent anonymous functions (functional interfaces).
+  - Syntax: `(parameters) -> expression` or `(parameters) -> { statements }`.
+  - Used primarily to define inline implementation of a functional interface.
+
+#### ✅ 50. How do default methods in interfaces work?
+**Answer:**
+- **Default Methods:**
+  - Introduced in Java 8 to provide a mechanism to add new methods to interfaces without breaking existing implementations.
+  - Defined using the `default` keyword.
+  - Allows interfaces to have method implementations.
+
+#### ✅ 51. What is a stream in Java 8, and how is it different from a collection?
+**Answer:**
+- **Stream in Java 8:**
+  - A sequence of elements supporting sequential and parallel aggregate operations.
+  - Different from collections as it doesn't store elements; it processes elements on demand.
+  - Supports functional-style operations like `filter`, `map`, `reduce`.
+
+#### ✅ 52. Explain the function of the Optional class in Java.
+**Answer:**
+- **Optional Class:**
+  - Introduced to deal with the problem of `null` references.
+  - Represents an optional value that may or may not be present.
+  - Helps avoid `NullPointerExceptions` by explicitly indicating whether a value is present or absent.
+
+#### ✅ 53. What are method references in Java 8?
+**Answer:**
+- **Method References:**
+  - A shorthand notation of a lambda expression to call a method.
+  - Three types: 
+    1. Reference to a static method.
+    2. Reference to an instance method.
+    3. Reference to a constructor.
+
+#### ✅ 54. How does the Java module system work?
+**Answer:**
+- **Java Module System:**
+  - Introduced in Java 9 to address the problem of the monolithic nature of classpath.
+  - Allows modularization of code into independent and reusable modules.
+  - Uses `module-info.java` to declare modules and their dependencies.
+
+#### ✅ 55. What new features were introduced in Java 9, Java 10, Java 11, and beyond?
+**Answer:**
+- **Java 9:**
+  - Module system (Project Jigsaw).
+  - `jshell` - a REPL (Read-Eval-Print Loop) for Java.
+  - Reactive Streams API.
+
+- **Java 10 and 11:**
+  - Local-variable type inference (`var` keyword).
+  - `jlink` for creating custom runtime images.
+  - HTTP client introduced in Java 11.
+  - New features vary in each subsequent release.
+
 
 # Java Input/Output (I/O)
 
-56. Explain the Java I/O Streams model.
-57. What is serialization in Java, and when would you use it?
-58. What is the difference between File and Path in Java?
-59. How do you read and write text files in Java?
-60. What's the difference between InputStream and Reader in Java?
+#### ✅ 56. Explain the Java I/O Streams model.
+**Answer:**
+- **Java I/O Streams Model:**
+  - Represents a flow of data between a source and a destination.
+  - Two main types: Input and Output streams.
+  - Stream classes are organized into two hierarchies: `InputStream` and `OutputStream` for byte streams, `Reader` and `Writer` for character streams.
+
+#### ✅ 57. What is serialization in Java, and when would you use it?
+**Answer:**
+- **Serialization in Java:**
+  - The process of converting the state of an object into a byte stream.
+  - Objects can be saved to a file, sent over the network, or stored in a database.
+  - Achieved by implementing the `Serializable` interface.
+  - Used when the need arises to persist the state of an object.
+
+#### ✅ 58. What is the difference between File and Path in Java?
+**Answer:**
+- **Difference between File and Path:**
+  - `File`: Represents a file or directory path on the file system. Introduced in Java before NIO (New I/O).
+  - `Path`: Introduced in Java NIO, represents a path in the file system. Offers more flexibility and features than the `File` class.
+
+#### ✅ 59. How do you read and write text files in Java?
+**Answer:**
+- **Reading and Writing Text Files:**
+  - **Reading:**
+    ```java
+    try (BufferedReader reader = new BufferedReader(new FileReader("file.txt"))) {
+        String line;
+        while ((line = reader.readLine()) != null) {
+            System.out.println(line);
+        }
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+    ```
+  - **Writing:**
+    ```java
+    try (BufferedWriter writer = new BufferedWriter(new FileWriter("output.txt"))) {
+        writer.write("Hello, World!");
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+    ```
+
+#### ✅ 60. What's the difference between InputStream and Reader in Java?
+**Answer:**
+- **Difference between InputStream and Reader:**
+  - `InputStream`: Used for reading binary data (bytes).
+  - `Reader`: Used for reading character data.
+  - Both are abstract classes with various concrete implementations for different sources (files, network, etc.).
+
+
 
 # Networking in Java
 
