@@ -62,6 +62,8 @@ A thread pool is a pool of pre-initialized threads that are ready to perform tas
 **Answer:**
 A context switch is the process of saving the current state of a running thread or process and restoring the saved state of another thread or process. It involves a transition from user mode to kernel mode. Context switches incur overhead and impact performance, so minimizing their frequency is essential for efficient concurrency.
 
+A context switching helps to share a single CPU across all processes to complete its execution and store the system's tasks status. When the process reloads in the system, the execution of the process starts at the same point where there is conflicting.
+
 #### ✅ 13. What are the benefits and disadvantages of using many small threads vs. a few large threads?
 **Answer:**
 - **Many Small Threads:**
