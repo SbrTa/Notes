@@ -127,14 +127,103 @@
 
 # Object-Oriented Programming (OOP) Concepts
 
-16. Explain the four main principles of OOP.
-17. How does Java implement inheritance?
-18. What are interfaces, and how are they different from abstract classes?
-19. Explain method overloading and method overriding.
-20. What is polymorphism in Java? Give an example.
-21. What is encapsulation in Java, and how is it achieved?
-22. What is the Liskov Substitution Principle?
-23. Can you illustrate the concept of coupling and cohesion in software design?
+#### ✅ 16. Explain the four main principles of OOP.
+**Answer:**
+- **Four Principles of OOP:**
+  1. **Encapsulation:** Bundling data (attributes) and methods that operate on the data into a single unit (class).
+  2. **Inheritance:** Mechanism for creating a new class (subclass) using the properties and behaviors of an existing class (superclass).
+  3. **Polymorphism:** Ability of a method to take on multiple forms, achieved through method overloading and overriding.
+  4. **Abstraction:** Simplifying complex systems by modeling classes based on relevant characteristics, ignoring unnecessary details.
+
+#### ✅ 17. How does Java implement inheritance?
+**Answer:**
+- **Java Inheritance:**
+  - Classes in Java can be derived from other classes.
+  - Syntax: `class Subclass extends Superclass { ... }`.
+  - Inherited members (fields and methods) are accessible in the subclass.
+  - Supports single inheritance for classes and multiple inheritance through interfaces.
+
+#### ✅ 18. What are interfaces, and how are they different from abstract classes?
+**Answer:**
+- **Interfaces:**
+  - Collection of abstract methods (methods without implementation).
+  - Declared using the `interface` keyword.
+  - Classes implement interfaces using the `implements` keyword.
+  - Supports multiple inheritance, as a class can implement multiple interfaces.
+
+- **Abstract Classes:**
+  - Can have both abstract and non-abstract methods.
+  - Declared using the `abstract` keyword.
+  - Classes extend abstract classes using the `extends` keyword.
+  - Can have fields (variables) with different access modifiers.
+
+#### ✅ 19. Explain method overloading and method overriding.
+**Answer:**
+- **Method Overloading:**
+  - Defining multiple methods with the same name but different parameters.
+  - Parameters can differ in number, type, or both.
+
+- **Method Overriding:**
+  - Providing a specific implementation for a method in the subclass that is already defined in its superclass.
+  - Requires the `@Override` annotation.
+  - Enhances polymorphism and supports dynamic method dispatch.
+
+#### ✅ 20. What is polymorphism in Java? Give an example.
+**Answer:**
+- **Polymorphism:**
+  - Ability of a method to take on multiple forms.
+  - Two types: compile-time (method overloading) and runtime (method overriding).
+  - Enhances flexibility and code reusability.
+
+  **Example:**
+  ```
+  java
+  class Animal {
+      void sound() {
+          System.out.println("Animal makes a sound");
+      }
+  }
+
+  class Dog extends Animal {
+      @Override
+      void sound() {
+          System.out.println("Dog barks");
+      }
+  }
+
+  class Cat extends Animal {
+      @Override
+      void sound() {
+          System.out.println("Cat meows");
+      }
+  }
+  ```
+  
+#### ✅ 21. What is encapsulation in Java, and how is it achieved?
+**Answer:**
+- **Encapsulation:**
+  - Bundling data and methods that operate on the data into a single unit (class).
+  - Access to the internal details of an object is restricted.
+  - Achieved through access modifiers (e.g., `private`, `protected`) and getter/setter methods.
+
+#### ✅ 22. What is the Liskov Substitution Principle?
+**Answer:**
+- **Liskov Substitution Principle (LSP):**
+  - States that objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program.
+  - Subtypes must adhere to the behavior specified by the supertype.
+  - Ensures consistency in polymorphic behavior.
+
+#### ✅ 23. Can you illustrate the concept of coupling and cohesion in software design?
+**Answer:**
+- **Coupling:**
+  - Measure of how much one class relies on another.
+  - High coupling indicates strong interdependence.
+  - Low coupling promotes modularity and ease of maintenance.
+
+- **Cohesion:**
+  - Measure of how closely the members of a class are related to each other.
+  - High cohesion indicates a focused, well-defined responsibility.
+  - Promotes clarity, reusability, and maintainability.
 
 # Java Collections Framework
 
