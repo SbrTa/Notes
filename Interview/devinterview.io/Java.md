@@ -556,23 +556,136 @@
 
 # Networking in Java
 
-61. What is a socket in Java networking, and how do you create a simple client-server application?
-62. What are the roles of the ServerSocket and Socket classes in Java?
-63. Explain the HTTPURLConnection class.
+#### ✅ 61. What is a socket in Java networking, and how do you create a simple client-server application?
+**Answer:**
+- **Socket in Java Networking:**
+  - A socket is an endpoint for sending or receiving data across a computer network.
+  - In Java, the `Socket` class is used for creating client-side sockets, and `ServerSocket` is used for creating server-side sockets.
+
+- **Simple Client-Server Application:**
+  - **Server:**
+    ```java
+    try (ServerSocket serverSocket = new ServerSocket(1234)) {
+        System.out.println("Server waiting for a connection...");
+        Socket clientSocket = serverSocket.accept();
+        // Perform communication with the client using InputStream and OutputStream.
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+    ```
+  - **Client:**
+    ```java
+    try (Socket socket = new Socket("localhost", 1234)) {
+        // Perform communication with the server using InputStream and OutputStream.
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+    ```
+
+#### ✅ 62. What are the roles of the ServerSocket and Socket classes in Java?
+**Answer:**
+- **Roles of `ServerSocket` and `Socket` Classes:**
+  - `ServerSocket`: Represents a server-side socket that listens for incoming client connections. Used to establish a server and accept connections.
+  - `Socket`: Represents a client-side or server-side endpoint for communication. Used to establish a connection between client and server.
+
+#### ✅ 63. Explain the HTTPURLConnection class.
+**Answer:**
+- **HTTPURLConnection class:**
+  - Part of Java's `java.net` package.
+  - Used to send and receive data over the HTTP and HTTPS protocols.
+  - Provides methods to set request methods, headers, and manage the connection.
+  - Example usage:
+    ```java
+    URL url = new URL("https://example.com");
+    HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+    // Set request methods, headers, etc.
+    InputStream inputStream = connection.getInputStream();
+    // Read the response from the input stream.
+    connection.disconnect();
+    ```
+
 
 # Java Memory Management
 
-64. How does the heap work in Java?
-65. What are reference types in Java?
-66. What is a memory leak and how would you prevent it in Java?
-67. Explain the concept of "Escape Analysis" in Java.
+#### ✅ 64. How does the heap work in Java?
+**Answer:**
+- **Heap in Java:**
+  - The heap is a region of a computer's memory used for dynamic memory allocation.
+  - In Java, objects are allocated memory in the heap.
+  - Divided into two parts: Young Generation (Eden, S0, S1) and Old Generation (Tenured).
+  - Garbage Collection (GC) occurs to reclaim memory occupied by objects that are no longer reachable.
+
+#### ✅ 65. What are reference types in Java?
+**Answer:**
+- **Reference Types:**
+  - In Java, there are four reference types:
+    1. **Strong Reference:** The most common type, used for regular object references.
+    2. **Soft Reference:** Objects are cleared at the discretion of the garbage collector when memory is low.
+    3. **Weak Reference:** Objects are cleared eagerly by the garbage collector.
+    4. **Phantom Reference:** Objects are finalized but not yet reclaimed.
+
+#### ✅ 66. What is a memory leak and how would you prevent it in Java?
+**Answer:**
+- **Memory Leak:**
+  - A memory leak occurs when an application allocates memory but fails to release it, leading to a gradual depletion of available memory.
+  - In Java, memory leaks often happen when objects are unintentionally kept alive and not eligible for garbage collection.
+
+- **Preventing Memory Leaks in Java:**
+  1. **Nullify References:** Set object references to `null` when they are no longer needed.
+  2. **Use try-with-resources:** Ensure that resources, like streams, are properly closed.
+  3. **Profile and Monitor:** Use tools like profilers to analyze memory usage and identify leaks.
+  4. **Properly Manage Threads:** Ensure proper management of threads to prevent thread-local memory leaks.
+
+#### ✅ 67. Explain the concept of "Escape Analysis" in Java.
+**Answer:**
+- **Escape Analysis:**
+  - Escape analysis is a compiler optimization technique that determines whether an object's reference can "escape" its local scope.
+  - If an object is found to be used only within a method and doesn't escape to the outer scope (e.g., being passed to other methods or returned), the compiler may optimize by allocating it on the stack rather than the heap.
+  - Reducing heap allocations can improve performance by avoiding garbage collection overhead.
+
 
 # Java Annotations
 
-68. What are annotations in Java?
-69. Can you create your own annotations?
-70. What built-in annotations are provided by Java?
-71. How are annotations used in frameworks such as Spring or Hibernate?
+#### ✅ 68. What are annotations in Java?
+**Answer:**
+- **Annotations in Java:**
+  - Annotations are a form of metadata that provides information about the program to the compiler or runtime.
+  - Introduced in Java 5, they start with the `@` symbol and are used to provide additional information to the compiler, runtime, or tools.
+
+#### ✅ 69. Can you create your own annotations?
+**Answer:**
+- **Creating Custom Annotations:**
+  - Yes, it's possible to create custom annotations in Java.
+  - Use the `@interface` keyword to define an annotation. Example:
+    ```java
+    @interface MyAnnotation {
+        String value() default "default value";
+        int count() default 1;
+    }
+    ```
+  - Annotations can include elements with default values.
+
+#### ✅ 70. What built-in annotations are provided by Java?
+**Answer:**
+- **Built-in Annotations in Java:**
+  1. **`@Override`:** Indicates that a method is intended to override a method in a superclass.
+  2. **`@Deprecated`:** Marks a method, class, or field as deprecated.
+  3. **`@SuppressWarnings`:** Instructs the compiler to suppress specific warnings.
+  4. **`@FunctionalInterface`:** Indicates that an interface is meant to be a functional interface.
+
+#### ✅ 71. How are annotations used in frameworks such as Spring or Hibernate?
+**Answer:**
+- **Annotations in Frameworks:**
+  - **Spring Framework:**
+    - Annotations like `@Autowired`, `@Component`, `@Controller`, etc., are used for dependency injection and component scanning.
+    - They simplify configuration and reduce the need for XML-based configurations.
+
+  - **Hibernate ORM:**
+    - Annotations such as `@Entity`, `@Table`, `@Column` are used for mapping Java objects to database tables.
+    - They provide a way to define the ORM mappings within the Java code.
+
+Annotations in frameworks enhance readability, reduce boilerplate code, and allow developers to express configurations and mappings directly in the source code.
+
 
 # Database Connectivity
 
