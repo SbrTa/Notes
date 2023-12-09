@@ -119,8 +119,10 @@ HAVING COUNT(*) > 1;
 #### ✅ 13. What is the N+1 query problem and how can you solve it?
 **Answer:**
 - **N+1 Query Problem:**
-  - Occurs when accessing a collection of entities results in N+1 individual queries to the database (N queries to retrieve the collection and 1 query for each related entity).
+  - You first do a query to get a list of records, then subsequently do another query for each of those records.
 - **Solution:**
+  - Configuring the entity relationship as eager.
+  - Eager loading on query level
   - Use eager loading or fetching strategies, such as JOIN FETCH in JPA/Hibernate, to retrieve related entities along with the main query, reducing the need for additional queries.
 
 #### ✅ 14. Explain the function of GROUP BY and HAVING clauses in SQL.
