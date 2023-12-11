@@ -49,4 +49,5 @@ Behavioral design patterns are concerned with the interaction and responsibility
 ### Resources
 Resources
   - https://github.com/pdichone/JavaDesignPatterns/tree/master
+  - https://springframework.guru/gang-of-four-design-patterns/
   - 
