@@ -2,7 +2,7 @@
 Ace your next tech interview with confidence.
 
 ## Web & Mobile Dev
-  - 100 Java interview questions.
+  - [100 Java interview questions.](https://github.com/SbrTa/Notes/blob/main/Interview/devinterview.io/Java.md)
   - 52 OOP interview questions.
   - 100 Spring interview questions.
   - 100 SQL interview questions.
