@@ -761,49 +761,186 @@ Using PreparedStatement is considered a best practice for executing parameterize
 
 # Testing in Java
 
-76. What is unit testing, and how is it implemented in Java?
-77. Can you explain the difference between JUnit and TestNG?
-78. What is mock testing, and which frameworks would you use for it in Java?
+#### ✅ 76. What is unit testing, and how is it implemented in Java?
+**Answer:** 
+Unit testing is a software testing technique where individual units or components of a software application are tested in isolation. In Java, unit testing is commonly implemented using frameworks like JUnit or TestNG. It involves testing each method or function to ensure it behaves as expected.
+
+#### ✅ 77. Can you explain the difference between JUnit and TestNG?
+**Answer:** 
+JUnit and TestNG are both popular Java testing frameworks, but they have some differences:
+- **TestNG** supports parallel execution of tests, whereas JUnit primarily focuses on sequential execution.
+- **TestNG** provides more flexible annotations and configuration options, making it suitable for complex test scenarios.
+- **JUnit** is traditionally associated with unit testing, while **TestNG** is often used for both unit and integration testing.
+
+#### ✅ 78. What is mock testing, and which frameworks would you use for it in Java?
+**Answer:** 
+Mock testing involves creating mock objects to simulate the behavior of real objects in a controlled way. It helps in isolating the unit being tested. In Java, popular mock testing frameworks include:
+- **Mockito:** A widely used mocking framework that simplifies the creation of mock objects and verification of interactions.
+- **EasyMock:** Another Java-based framework for creating mock objects, especially useful for unit testing.
+
+
 
 # Java Design Patterns
 
-79. What are design patterns, and why are they useful?
-80. Can you explain the Singleton pattern and its pitfalls?
-81. What is the Factory pattern in Java?
-82. How does the Strategy pattern work?
-83. What is the Observer pattern and where is it used?
+#### ✅ 79. What are design patterns, and why are they useful?
+**Answer:** 
+Design patterns are general reusable solutions to common problems encountered in software design. They represent best practices and provide proven solutions for various design challenges. Design patterns offer a shared vocabulary for developers and help in creating more maintainable and scalable software.
+
+#### ✅ 80. Can you explain the Singleton pattern and its pitfalls?
+**Answer:** 
+The Singleton pattern ensures that a class has only one instance and provides a global point of access to it. Common pitfalls include:
+- **Lazy Initialization:** Issues may arise when using lazy initialization in a multithreaded environment.
+- **Global State:** Singleton introduces a global state, which can make the code less modular and harder to test.
+
+#### ✅ 81. What is the Factory pattern in Java?
+**Answer:** 
+The Factory pattern is a creational pattern that provides an interface for creating objects in a superclass but allows subclasses to alter the type of objects that will be created. In Java, it's commonly implemented using interfaces and concrete classes to create objects.
+
+#### ✅ 82. How does the Strategy pattern work?
+**Answer:** 
+The Strategy pattern defines a family of algorithms, encapsulates each algorithm, and makes them interchangeable. It allows the client to choose the appropriate algorithm at runtime. In Java, it involves creating a family of algorithms, encapsulating each algorithm in a separate class, and making the classes interchangeable.
+
+#### ✅ 83. What is the Observer pattern and where is it used?
+**Answer:** 
+The Observer pattern is a behavioral pattern where an object, known as the subject, maintains a list of dependents, called observers, that are notified of any state changes. It is widely used in implementing distributed event handling systems, such as implementing MVC architecture in GUI frameworks.
+
 
 # Java Security
 
-84. What is the Java security model?
-85. How can you secure Java code against SQL injection attacks?
-86. Explain the role of the SecurityManager in Java.
+#### ✅ 84. What is the Java security model?
+**Answer:**
+The Java security model is designed to provide a secure execution environment for Java applications. It includes features such as the classloader, bytecode verification, and the SecurityManager. It aims to prevent unauthorized access to system resources and ensure the integrity and safety of Java applications.
+
+#### ✅ 85. How can you secure Java code against SQL injection attacks?
+**Answer:**
+To secure Java code against SQL injection attacks:
+- **Use Prepared Statements:** Parameterized queries provided by Prepared Statements help prevent SQL injection by separating SQL code from user input.
+- **Avoid Dynamic SQL:** Refrain from building SQL queries dynamically by concatenating strings. Instead, use parameterized queries.
+- **Input Validation:** Validate and sanitize user input to ensure it adheres to expected patterns and does not contain malicious content.
+
+#### ✅ 86. Explain the role of the SecurityManager in Java.
+**Answer:**
+The SecurityManager in Java is a part of the Java security model. It acts as a security guard for the Java Virtual Machine (JVM) by defining the access control policies for various actions. It helps prevent untrusted code from performing harmful actions, such as accessing the file system or network, by enforcing security policies. The SecurityManager is often used in applets and other scenarios where untrusted code needs to run securely.
+
 
 # Performance Tuning in Java
 
-87. How would you identify and improve the performance of a Java application?
-88. What tools do you use for Java profiling?
-89. What are some common performance issues in Java applications?
+#### ✅ 87. How would you identify and improve the performance of a Java application?
+**Answer:**
+Identifying and improving the performance of a Java application involves:
+- **Profiling:** Use profiling tools to identify bottlenecks and performance hotspots.
+- **Code Review:** Analyze the code for inefficient algorithms, resource leaks, or unnecessary complexity.
+- **Memory Management:** Optimize memory usage, identify and fix memory leaks.
+- **Concurrency:** Utilize multi-threading and concurrency wisely to enhance performance.
+- **Caching:** Implement caching mechanisms to store and reuse frequently accessed data.
+- **Database Optimization:** Optimize database queries and indexing for efficient data retrieval.
+
+#### ✅ 88. What tools do you use for Java profiling?
+**Answer:**
+Some commonly used Java profiling tools are:
+- **VisualVM:** VisualVM is a monitoring, troubleshooting, and profiling tool that integrates with the JVM.
+- **YourKit:** YourKit Java Profiler provides features like CPU profiling, memory profiling, and thread analysis.
+- **JProfiler:** JProfiler offers various profiling features, including CPU, memory, and thread profiling.
+
+#### ✅ 89. What are some common performance issues in Java applications?
+**Answer:**
+Common performance issues in Java applications include:
+- **Memory Leaks:** Unreleased objects causing memory consumption.
+- **Inefficient Algorithms:** Poorly designed algorithms leading to slow performance.
+- **Blocking Threads:** Inadequate use of concurrency, resulting in blocked threads.
+- **Suboptimal Database Queries:** Inefficient database queries impacting response time.
+- **Resource Mismanagement:** Improper handling of resources, such as file handles or database connections.
+- **Lack of Caching:** Failure to implement caching for frequently used data.
+
 
 # Java Development Best Practices
 
-90. What are some coding best practices in Java?
-91. How would you manage dependencies in a Java project?
-92. What is continuous integration in the context of Java development?
+#### ✅ 90. What are some coding best practices in Java?
+**Answer:**
+Some coding best practices in Java include:
+- **Meaningful Naming:** Use descriptive and meaningful names for variables, classes, and methods.
+- **Code Modularity:** Divide code into small, manageable, and modular units.
+- **Proper Indentation:** Follow a consistent and readable indentation style.
+- **Comments:** Include comments for complex logic or to explain the purpose of code segments.
+- **Error Handling:** Implement proper error-handling mechanisms, including exceptions and logging.
+- **Avoid Magic Numbers:** Replace numeric literals with named constants for better readability.
+- **Code Reusability:** Encourage code reuse through methods, classes, and inheritance.
+- **TDD (Test-Driven Development):** Write tests before writing code to ensure functionality and catch issues early.
+
+#### ✅ 91. How would you manage dependencies in a Java project?
+**Answer:**
+Dependency management in Java is often handled using tools like Maven or Gradle. These tools allow you to define dependencies in a configuration file (pom.xml for Maven or build.gradle for Gradle) and automatically download the required libraries from repositories. This simplifies the process of managing external libraries and ensures that the project has all necessary dependencies.
+
+#### ✅ 92. What is continuous integration in the context of Java development?
+**Answer:**
+Continuous Integration (CI) is a software development practice where changes to the codebase are automatically built, tested, and integrated into the project. In the context of Java development, CI tools like Jenkins, Travis CI, or GitLab CI/CD can be configured to monitor code repositories. When developers push changes, the CI system triggers automated builds and tests, providing rapid feedback on the integration status. This practice helps identify and address issues early in the development process.
+
 
 # JVM Internals
 
-93. Explain the structure of the JVM and how it executes code.
-94. How does the Just-In-Time (JIT) compiler work?
-95. What is the role of the garbage collector in the JVM?
+#### ✅ 93. Explain the structure of the JVM and how it executes code.
+**Answer:**
+The Java Virtual Machine (JVM) is responsible for executing Java bytecode. Its structure includes:
+- **Class Loader:** Loads classes into the JVM.
+- **Memory Area:** Divided into Heap (for objects), Stack (for method calls and local variables), and Method Area (for class-level data).
+- **Execution Engine:** Executes bytecode through an interpreter or Just-In-Time (JIT) compiler.
+- **Native Interface:** Allows interaction with native libraries.
+
+JVM executes code by loading classes, verifying them, and then interpreting or compiling bytecode.
+
+#### ✅ 94. How does the Just-In-Time (JIT) compiler work?
+**Answer:**
+The JIT compiler is part of the JVM that translates Java bytecode into native machine code just before execution. It works in two main stages:
+1. **Compilation:** Converts bytecode into an intermediate form (usually machine-independent).
+2. **Optimization:** Further transforms the intermediate code into optimized native machine code.
+
+This process enhances performance by translating bytecode into efficient machine code tailored to the specific platform.
+
+#### ✅ 95. What is the role of the garbage collector in the JVM?
+**Answer:**
+The garbage collector manages memory in the Java Heap by identifying and reclaiming unused objects. Its role includes:
+- **Mark:** Identifying objects reachable from the root.
+- **Sweep:** Removing unreferenced objects.
+- **Compact:** Reducing fragmentation by compacting the remaining objects.
+
+The garbage collector automates memory management, preventing memory leaks and improving application efficiency.
+
 
 # Popular Java Frameworks
 
-96. What is Spring Framework and what problem does it solve?
-97. How does Hibernate ORM work?
-98. What is the purpose of the Spring Boot framework?
+#### ✅ 96. What is Spring Framework and what problem does it solve?
+**Answer:**
+The Spring Framework is a comprehensive Java framework that simplifies Java development by providing infrastructure support, including dependency injection, aspect-oriented programming, and various modules for data access, transaction management, and more. It solves challenges in building enterprise-level applications by promoting modularity, flexibility, and testability.
+
+#### ✅ 97. How does Hibernate ORM work?
+**Answer:**
+Hibernate is an Object-Relational Mapping (ORM) framework for Java. It maps Java objects to database tables, eliminating the need for manual SQL queries. The key steps include:
+1. **Mapping:** Annotating Java objects to represent database tables.
+2. **Configuration:** Setting up Hibernate configuration files.
+3. **Session Factory:** Creating a factory for obtaining sessions.
+4. **Transaction Management:** Managing transactions for database operations.
+5. **Querying:** Using Hibernate Query Language (HQL) or Criteria API.
+
+Hibernate simplifies database interactions, making it easier to work with relational databases in Java applications.
+
+#### ✅ 98. What is the purpose of the Spring Boot framework?
+**Answer:**
+Spring Boot is a project within the Spring ecosystem designed to simplify the development of production-ready applications. It provides convention-over-configuration, making it easy to set up and deploy applications with minimal effort. Spring Boot simplifies dependency management, configuration, and the overall development process, enabling developers to focus more on building features and less on boilerplate setup. It is especially useful for microservices architectures.
+
 
 # Tools and Development Environments
 
-99. What IDEs are commonly used for Java development?
-100. Are you familiar with build tools like Maven and Gradle?
+#### ✅ 99. What IDEs are commonly used for Java development?
+**Answer:**
+Commonly used Integrated Development Environments (IDEs) for Java development include:
+1. **Eclipse:** A widely used open-source IDE with extensive plugin support.
+2. **IntelliJ IDEA:** A popular commercial IDE known for its intelligent code assistance.
+3. **NetBeans:** An open-source IDE that supports Java development with a user-friendly interface.
+4. **Visual Studio Code:** A lightweight, open-source code editor with robust Java support.
+
+#### ✅ 100. Are you familiar with build tools like Maven and Gradle?
+**Answer:**
+Yes, Maven and Gradle are popular build automation tools in the Java ecosystem. They help manage project dependencies, build processes, and facilitate project configuration. Key points:
+- **Maven:** Uses XML-based project configuration and follows convention-over-configuration principles. It relies on plugins for various tasks and has a central repository for dependency management.
+- **Gradle:** Uses Groovy or Kotlin DSL for build configuration, offering flexibility and conciseness. It supports incremental builds and has a powerful dependency management system. Gradle is gaining popularity for its expressive build scripts.
+
