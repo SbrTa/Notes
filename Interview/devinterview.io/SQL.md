@@ -1,25 +1,65 @@
 # SQL Fundamentals
 
-1. What is SQL and what is it used for?
-2. Describe the difference between SQL and NoSQL databases.
-3. What are the different types of SQL commands?
-4. Explain the purpose of the SELECT statement.
-5. What is the difference between WHERE and HAVING clauses?
-6. Define what a JOIN is in SQL and list its types.
-7. What is a primary key in a database?
-8. Explain what a foreign key is and how it is used.
-9. How can you prevent SQL injections?
-10. What is normalization? Explain with examples.
-11. Describe the concept of denormalization and when you would use it.
-12. What are indexes and how can they improve query performance?
-13. Explain the purpose of the GROUP BY clause.
-14. What is a subquery, and when would you use one?
-15. Describe the functions of the ORDER BY clause.
-16. What are aggregate functions in SQL?
-17. Elucidate the differences between INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL JOIN.
-18. How do you insert a new row into a database table?
-19. Explain how to update records in a database table.
-20. What is a SQL View and what are its advantages?
+#### ✅ 1. What is SQL and what is it used for?
+Answer: SQL (Structured Query Language) is a domain-specific language used to manage and manipulate relational databases. It is employed for tasks such as querying data, updating records, inserting new data, and controlling database access.
+
+#### ✅ 2. Describe the difference between SQL and NoSQL databases.
+Answer: SQL databases are relational databases that use a structured schema, while NoSQL databases are non-relational and typically do not require a fixed schema. SQL databases use SQL for querying, whereas NoSQL databases use various query languages.
+
+#### ✅ 3. What are the different types of SQL commands?
+Answer: SQL commands can be categorized into Data Query Language (DQL), Data Definition Language (DDL), Data Manipulation Language (DML), and Data Control Language (DCL).
+
+#### ✅ 4. Explain the purpose of the SELECT statement.
+Answer: The SELECT statement is used to retrieve data from one or more tables in a database. It allows you to specify the columns you want to retrieve and apply conditions to filter the results.
+
+#### ✅ 5. What is the difference between WHERE and HAVING clauses?
+Answer: The WHERE clause is used in a SELECT statement to filter rows before grouping or aggregating. The HAVING clause is used with GROUP BY to filter the results after grouping.
+
+#### ✅ 6. Define what a JOIN is in SQL and list its types.
+Answer: JOIN is used to combine rows from two or more tables based on a related column. Types of JOIN include INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL JOIN.
+
+#### ✅ 7. What is a primary key in a database?
+Answer: A primary key is a unique identifier for a record in a table. It ensures each row can be uniquely identified and is used to establish relationships between tables.
+
+#### ✅ 8. Explain what a foreign key is and how it is used.
+Answer: A foreign key is a column that establishes a link between data in two tables. It enforces referential integrity, ensuring that values in the foreign key column correspond to values in the primary key of another table.
+
+#### ✅ 9. How can you prevent SQL injections?
+Answer: To prevent SQL injections, use parameterized queries, input validation, and prepared statements. Avoid concatenating user inputs directly into SQL queries.
+
+#### ✅ 10. What is normalization? Explain with examples.
+Answer: Normalization is the process of organizing data to reduce redundancy and improve data integrity. For example, breaking a table with customer information into separate tables for customers and orders.
+
+#### ✅ 11. Describe the concept of denormalization and when you would use it.
+Answer: Denormalization involves intentionally introducing redundancy to a database to improve query performance. It is used when there is a need for faster read operations and data integrity can be sacrificed to some extent.
+
+#### ✅ 12. What are indexes and how can they improve query performance?
+Answer: Indexes are data structures that provide a quick lookup of rows in a table based on the values in one or more columns. They improve query performance by allowing the database engine to locate and retrieve data more efficiently.
+
+#### ✅ 13. Explain the purpose of the GROUP BY clause.
+Answer: The GROUP BY clause is used to group rows returned by a query based on the values of one or more columns. It is often used with aggregate functions to perform operations on each group.
+
+#### ✅ 14. What is a subquery, and when would you use one?
+Answer: A subquery is a query nested within another query. It is used to retrieve data that will be used by the main query. Subqueries can be used in SELECT, FROM, WHERE, and HAVING clauses.
+
+#### ✅ 15. Describe the functions of the ORDER BY clause.
+Answer: The ORDER BY clause is used to sort the result set of a query based on one or more columns, either in ascending (ASC) or descending (DESC) order.
+
+#### ✅ 16. What are aggregate functions in SQL?
+Answer: Aggregate functions perform a calculation on a set of values and return a single value. Examples include COUNT, SUM, AVG, MIN, and MAX.
+
+#### ✅ 17. Elucidate the differences between INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL JOIN.
+Answer: INNER JOIN returns only the matched rows between two tables. LEFT JOIN returns all rows from the left table and the matched rows from the right table. RIGHT JOIN returns all rows from the right table and the matched rows from the left table. FULL JOIN returns all rows when there is a match in either the left or right table.
+
+#### ✅ 18. How do you insert a new row into a database table?
+Answer: To insert a new row, use the INSERT INTO statement followed by the table name and values for each column.
+
+#### ✅ 19. Explain how to update records in a database table.
+Answer: To update records, use the UPDATE statement with the SET clause to specify the new values, and use the WHERE clause to identify the records to be updated.
+
+#### ✅ 20. What is a SQL View and what are its advantages?
+Answer: A SQL View is a virtual table based on the result of a SELECT query. It allows users to query the view as if it were a table. Advantages include simplifying complex queries, providing a layer of security, and encapsulating business logic.
+
 
 
 # SQL Data Types and Operators
