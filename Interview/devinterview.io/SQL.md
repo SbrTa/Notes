@@ -98,16 +98,36 @@ Answer: Arithmetic operators (+, -, *, /) are used to perform mathematical opera
 
 # SQL Advanced Queries
 
-31. Explain how to use the CASE statement in SQL.
-32. How would you perform a self JOIN?
-33. What is a cross JOIN and when would you use it?
-34. How to implement pagination in SQL queries?
-35. Explain the concept of Common Table Expressions (CTEs) and recursive CTES.
-36. What are window functions and how are they used?
-37. How can you concatenate column values in SQL?
-38. What is the PIVOT operation and how would you apply it?
-39. Explain the process of combining a query that uses a GROUP BY with one that uses ORDER BY.
-40. How would you find duplicate records in a table?
+#### ✅ 31. Explain how to use the CASE statement in SQL.
+Answer: The CASE statement is used to perform conditional logic in SQL queries. It can be used in SELECT, WHERE, and ORDER BY clauses to conditionally return values based on specified conditions.
+
+#### ✅ 32. How would you perform a self JOIN?
+Answer: A self JOIN is used to combine rows from the same table. You need to use an alias to differentiate between the two instances of the same table. For example: `SELECT a.column, b.column FROM table a JOIN table b ON a.id = b.related_id;`
+
+#### ✅ 33. What is a cross JOIN and when would you use it?
+Answer: A cross JOIN returns the Cartesian product of two tables, meaning it combines each row from the first table with every row from the second table. It is used when you want to combine all rows from both tables.
+
+#### ✅ 34. How to implement pagination in SQL queries?
+Answer: Pagination can be achieved using the LIMIT and OFFSET clauses in SQL. For example: `SELECT * FROM table LIMIT 10 OFFSET 20;` retrieves the third page of 10 records.
+
+#### ✅ 35. Explain the concept of Common Table Expressions (CTEs) and recursive CTES.
+Answer: CTEs provide a way to define temporary result sets within a SELECT, INSERT, UPDATE, or DELETE statement. Recursive CTEs are used for queries that reference themselves, often used for hierarchical data.
+
+#### ✅ 36. What are window functions and how are they used?
+Answer: Window functions perform calculations across a set of table rows related to the current row. They are used with the OVER() clause and include functions like ROW_NUMBER(), RANK(), and SUM().
+
+#### ✅ 37. How can you concatenate column values in SQL?
+Answer: CONCAT() or the concatenation operator (||) can be used to concatenate column values. For example: `SELECT CONCAT(first_name, ' ', last_name) AS full_name FROM table;`
+
+#### ✅ 38. What is the PIVOT operation and how would you apply it?
+Answer: PIVOT is used to rotate rows into columns, aggregating data in the process. It involves specifying the values to be pivoted and the aggregation functions. For example: `SELECT * FROM table PIVOT (SUM(value) FOR category IN ('A', 'B', 'C'));`
+
+#### ✅ 39. Explain the process of combining a query that uses a GROUP BY with one that uses ORDER BY.
+Answer: You can combine a GROUP BY query with ORDER BY to sort the grouped results. For example: `SELECT column, COUNT(*) FROM table GROUP BY column ORDER BY COUNT(*) DESC;`
+
+#### ✅ 40. How would you find duplicate records in a table?
+Answer: To find duplicate records, you can use the GROUP BY clause along with the HAVING clause to filter groups with counts greater than one. For example: `SELECT column, COUNT(*) FROM table GROUP BY column HAVING COUNT(*) > 1;`
+
 
 
 # Database Design & Architecture
