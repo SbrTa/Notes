@@ -64,16 +64,36 @@ Answer: A SQL View is a virtual table based on the result of a SELECT query. It 
 
 # SQL Data Types and Operators
 
-21. List the different data types available in SQL.
-22. What are the differences between CHAR, VARCHAR, and TEXT data types?
-23. How do you use the BETWEEN operator in SQL?
-24. Describe the use of the IN operator.
-25. Explain the use of wildcard characters in SQL.
-26. What is the purpose of the LIKE operator?
-27. How do you handle NULL values in SQL?
-28. What does the COALESCE function do?
-29. What is the difference between UNION and UNION ALL?
-30. Describe the use of arithmetic operators in SQL queries.
+#### ✅ 21. List the different data types available in SQL.
+Answer: Common data types in SQL include INTEGER, FLOAT, CHAR, VARCHAR, TEXT, DATE, TIME, DATETIME, BOOLEAN, and more, depending on the specific database system.
+
+#### ✅ 22. What are the differences between CHAR, VARCHAR, and TEXT data types?
+Answer: CHAR is a fixed-length character type, VARCHAR is a variable-length character type, and TEXT is used for large amounts of text data. CHAR pads values with spaces, while VARCHAR stores only the actual characters entered.
+
+#### ✅ 23. How do you use the BETWEEN operator in SQL?
+Answer: The BETWEEN operator is used to filter results within a specific range. For example: `SELECT * FROM table WHERE column BETWEEN value1 AND value2;`
+
+#### ✅ 24. Describe the use of the IN operator.
+Answer: The IN operator is used to filter results based on a list of specified values. For example: `SELECT * FROM table WHERE column IN (value1, value2, ...);`
+
+#### ✅ 25. Explain the use of wildcard characters in SQL.
+Answer: Wildcard characters like '%' and '_' are used in conjunction with the LIKE operator to perform pattern matching in SQL queries. '%' represents any sequence of characters, and '_' represents a single character.
+
+#### ✅ 26. What is the purpose of the LIKE operator?
+Answer: The LIKE operator is used to search for a specified pattern in a column. It is often used with wildcard characters for flexible pattern matching.
+
+#### ✅ 27. How do you handle NULL values in SQL?
+Answer: NULL values can be handled using the IS NULL or IS NOT NULL conditions in WHERE clauses. Additionally, functions like COALESCE and IFNULL can be used to provide default values for NULLs.
+
+#### ✅ 28. What does the COALESCE function do?
+Answer: The COALESCE function is used to return the first non-NULL expression among its arguments. It is often used to handle NULL values by providing a default value.
+
+#### ✅ 29. What is the difference between UNION and UNION ALL?
+Answer: UNION combines the result sets of two queries and removes duplicate rows, while UNION ALL combines the result sets without removing duplicates.
+
+#### ✅ 30. Describe the use of arithmetic operators in SQL queries.
+Answer: Arithmetic operators (+, -, *, /) are used to perform mathematical operations on numeric data in SQL queries. For example: `SELECT column1 + column2 FROM table;`
+
 
 
 # SQL Advanced Queries
