@@ -15,7 +15,15 @@
 ## 2. Kafka Topics Advanced
 
 ## 3. Kafka Producers Advanced
+- [Kafka Producer Acks](https://github.com/SbrTa/Notes/blob/main/Kafka/31.%20Kafka%20Producer%20Acks.md)
+- [Kafka Producer Retries](https://github.com/SbrTa/Notes/blob/main/Kafka/32.%20Kafka%20Producer%20Retries.md)
+- [Kafka Message Compression](https://github.com/SbrTa/Notes/blob/main/Kafka/33.%20Kafka%20Message%20Compression.md)
+- [Kafka Producer Batching](https://github.com/SbrTa/Notes/blob/main/Kafka/34.%20Kafka%20Producer%20Batching.md)
+- [Producer Default Partitioner & Sticky Partitioner](https://github.com/SbrTa/Notes/blob/main/Kafka/35.%20Producer%20Default%20Partitioner%20&%20Sticky%20Partitioner.md)
 
 ## 4. Kafka Consumers Advanced
-
+- []()
+- []()
+- []()
+- []()
 ## 5. Kafka Administration
