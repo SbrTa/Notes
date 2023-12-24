@@ -1,7 +1,12 @@
 # Apache Kafka
 
-## 0. Apache Kafka
 
+## 0. Apache Kafka
+- [Apache Kafka](https://github.com/SbrTa/Notes/blob/main/Kafka/01.%20Apache%20Kafka.md)
+- [Installation and Start](https://github.com/SbrTa/Notes/blob/main/Kafka/02.%20Install%20and%20start.md)
+- [CLI](https://github.com/SbrTa/Notes/blob/main/Kafka/03.%20Kafka%20CLI.md)
+
+  
 ## 1. Kafka Fundamentals
 - [Kafka Topics](https://github.com/SbrTa/Notes/blob/main/Kafka/11.%20Kafka%20Topics.md)
 - [Kafka Producers](https://github.com/SbrTa/Notes/blob/main/Kafka/12.%20Kafka%20Producers.md)
