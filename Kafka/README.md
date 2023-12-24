@@ -1,11 +1,13 @@
 # Apache Kafka
 
-## Kafka Fundamentals
+## 0. Apache Kafka
 
-## Kafka Topics Advanced
+## 1. Kafka Fundamentals
 
-## Kafka Producers Advanced
+## 2. Kafka Topics Advanced
 
-## Kafka Consumers Advanced
+## 3. Kafka Producers Advanced
 
-## Kafka Administration
+## 4. Kafka Consumers Advanced
+
+## 5. Kafka Administration
