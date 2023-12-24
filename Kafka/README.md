@@ -22,8 +22,10 @@
 - [Producer Default Partitioner & Sticky Partitioner](https://github.com/SbrTa/Notes/blob/main/Kafka/35.%20Producer%20Default%20Partitioner%20&%20Sticky%20Partitioner.md)
 
 ## 4. Kafka Consumers Advanced
-- []()
-- []()
-- []()
-- []()
+- [Delivery Semantics for Kafka Consumers](https://github.com/SbrTa/Notes/blob/main/Kafka/41.%20Delivery%20Semantics%20for%20Kafka%20Consumers.md)
+- [Kafka Consumer Poll and Internal Threads Behavior](https://github.com/SbrTa/Notes/blob/main/Kafka/42.%20Kafka%20Consumer%20Poll%20and%20Internal%20Threads%20Behavior.md)
+- [Consumer Auto Offsets Reset Behavior](https://github.com/SbrTa/Notes/blob/main/Kafka/43.%20Consumer%20Auto%20Offsets%20Reset%20Behavior.md)
+- [Consumer Read from Closest Replica](https://github.com/SbrTa/Notes/blob/main/Kafka/44.%20Consumer%20Read%20from%20Closest%20Replica.md)
+- [Consumer Incremental Rebalance & Static Group Membership](https://github.com/SbrTa/Notes/blob/main/Kafka/45.%20Consumer%20Incremental%20Rebalance%20&%20Static%20Group%20Membership.md)
+
 ## 5. Kafka Administration
