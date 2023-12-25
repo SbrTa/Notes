@@ -84,7 +84,9 @@ Answer: A subquery is a query nested within another query. It is used to retriev
 Answer: The ORDER BY clause is used to sort the result set of a query based on one or more columns, either in ascending (ASC) or descending (DESC) order.
 
 #### ✅ 16. What are aggregate functions in SQL?
-Answer: Aggregate functions perform a calculation on a set of values and return a single value. Examples include COUNT, SUM, AVG, MIN, and MAX.
+Answer: Aggregate functions perform a calculation on a set of values and return a single value. 
+
+COUNT, SUM, AVG, MIN, and MAX.
 
 #### ✅ 17. Elucidate the differences between INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL JOIN.
 Answer: INNER JOIN returns only the matched rows between two tables. LEFT JOIN returns all rows from the left table and the matched rows from the right table. RIGHT JOIN returns all rows from the right table and the matched rows from the left table. FULL JOIN returns all rows when there is a match in either the left or right table.
