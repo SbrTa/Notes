@@ -319,29 +319,98 @@ These functions are particularly useful when you need to change the data type fo
 
 # Transaction Control and Locking
 
-66. What is a database transaction?
-67. Explain the concept of locking and its types in SQL databases.
-68. What are the properties of transactions?
-69. How do you manage transaction isolation levels?
-70. What does it mean to commit or roll back a transaction?
+#### ✅ 66. What is a database transaction?
+Answer: 
+A database transaction is a sequence of one or more SQL statements that are executed as a single unit of work. It follows the ACID properties (Atomicity, Consistency, Isolation, Durability) to ensure the reliability and integrity of data in a database.
+
+#### ✅ 67. Explain the concept of locking and its types in SQL databases.
+Answer: 
+Locking is a mechanism used to control access to shared resources in a database to prevent conflicts and ensure data integrity. Types of locks include:
+- Shared lock: Allows multiple transactions to read a resource simultaneously.
+- Exclusive lock: Prevents other transactions from accessing a resource for reading or writing.
+- Read lock: Similar to shared lock, allows multiple transactions to read a resource.
+- Write lock: Similar to exclusive lock, prevents other transactions from writing to a resource.
+
+#### ✅ 68. What are the properties of transactions?
+Answer: 
+The properties of transactions, often referred to as ACID properties, are:
+- **Atomicity:** Transactions are treated as a single, indivisible unit of work.
+- **Consistency:** Transactions bring the database from one valid state to another, preserving data integrity.
+- **Isolation:** Transactions are executed independently of each other, and the result of one transaction is not visible to others until it is committed.
+- **Durability:** Once a transaction is committed, its effects on the database are permanent and survive system failures.
+
+#### ✅ 69. How do you manage transaction isolation levels?
+Answer: 
+Transaction isolation levels determine the degree to which one transaction must be isolated from the effects of other concurrent transactions. Common isolation levels include READ UNCOMMITTED, READ COMMITTED, REPEATABLE READ, and SERIALIZABLE. Isolation levels can be set using SQL statements or database configuration settings.
+
+#### ✅ 70. What does it mean to commit or roll back a transaction?
+Answer: 
+- **Commit:** When a transaction is committed, the changes made by the transaction become permanent and are saved to the database.
+- **Rollback:** If there is an issue or error during a transaction, rolling back the transaction undoes all the changes made, restoring the database to its state before the transaction started. It ensures that the database remains consistent even if a part of the transaction fails.
+
 
 
 # SQL and Modern Data Ecosystems
 
-71. How can SQL be integrated with big data technologies?
-72. Discuss the interoperability of SQL with cloud-based data stores.
-73. What is Data Lake and how can SQL interact with it?
-74. Explain the interaction between SQL and NoSQL within the same application.
-75. How does SQL work within a microservices architecture?
+#### ✅ 71. How can SQL be integrated with big data technologies?
+Answer:
+SQL can be integrated with big data technologies through tools and technologies like Apache Hive, Apache Drill, and Apache Impala. These tools provide SQL interfaces to interact with big data stored in Hadoop Distributed File System (HDFS) or other distributed storage systems.
+
+#### ✅ 72. Discuss the interoperability of SQL with cloud-based data stores.
+Answer:
+SQL is highly interoperable with various cloud-based data stores. Cloud databases, such as Amazon Aurora, Google BigQuery, or Microsoft Azure SQL Database, often provide SQL interfaces for data querying and manipulation. Users can connect to these databases using standard SQL queries.
+
+#### ✅ 73. What is Data Lake and how can SQL interact with it?
+Answer:
+A Data Lake is a centralized repository that allows storing structured and unstructured data at any scale. SQL can interact with a Data Lake using tools like Apache Hive, which provides a SQL-like query language called HiveQL for querying and processing data stored in the Data Lake.
+
+#### ✅ 74. Explain the interaction between SQL and NoSQL within the same application.
+Answer:
+In a polyglot persistence architecture, an application can use both SQL and NoSQL databases based on specific requirements. SQL databases may handle structured data and complex transactions, while NoSQL databases (like MongoDB or Cassandra) may be used for handling unstructured or semi-structured data. Integration can be achieved through the application layer, ensuring that each database type serves its intended purpose.
+
+#### ✅ 75. How does SQL work within a microservices architecture?
+Answer:
+In a microservices architecture, each microservice is designed to have its own database, and SQL databases are commonly used for managing the data within each microservice. Microservices can interact with their respective databases using SQL queries. Additionally, an API gateway or messaging system may be used to coordinate communication between microservices, ensuring data consistency and integrity.
 
 
 # SQL Best Practices and Standards
 
-76. What are some common SQL coding practices you follow?
-77. How can you ensure the portability of SQL scripts across different database systems?
-78. What methods do you use for version controlling SQL scripts?
-79. What are the benefits of using stored procedures instead of embedding SQL queries in code?
-80. How do you document SQL code effectively?
+#### ✅ 76. What are some common SQL coding practices you follow?
+Answer:
+- Use consistent and meaningful naming conventions for tables, columns, and other database objects.
+- Indent SQL code for readability.
+- Avoid using SELECT * and specify only the necessary columns.
+- Use parameterized queries to prevent SQL injection.
+- Comment code to explain complex queries or business logic.
+- Regularly review and optimize queries for performance.
+
+#### ✅ 77. How can you ensure the portability of SQL scripts across different database systems?
+Answer:
+- Use standard SQL syntax and avoid database-specific features.
+- Be cautious with data types and functions, as they may vary across databases.
+- Test scripts on multiple database systems to identify and resolve compatibility issues.
+
+#### ✅ 78. What methods do you use for version controlling SQL scripts?
+Answer:
+- Use version control systems like Git to track changes in SQL scripts.
+- Maintain separate scripts for database schema changes and data modifications.
+- Include comments or documentation to describe changes made in each version.
+- Follow a branching strategy to manage development, testing, and production environments.
+
+#### ✅ 79. What are the benefits of using stored procedures instead of embedding SQL queries in code?
+Answer:
+- **Modularity:** Stored procedures encapsulate SQL logic, promoting code reusability.
+- **Security:** Stored procedures provide a layer of security by controlling access to data and preventing SQL injection.
+- **Performance:** Stored procedures are precompiled, leading to potential performance improvements.
+- **Maintenance:** Changes to SQL logic can be made centrally in the stored procedure without modifying application code.
+
+#### ✅ 80. How do you document SQL code effectively?
+Answer:
+- Use comments to explain the purpose of the code, especially for complex queries or business logic.
+- Include a header comment with information about the script, author, and modification history.
+- Document dependencies on tables, columns, or external systems.
+- Provide examples of usage and expected outcomes.
+- Maintain a separate documentation file or use inline documentation tools for comprehensive documentation.
 
 
 # Analytical SQL Questions
