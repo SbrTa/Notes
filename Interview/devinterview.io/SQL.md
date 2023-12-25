@@ -111,13 +111,17 @@ Answer: Common data types in SQL include INTEGER, FLOAT, CHAR, VARCHAR, TEXT, DA
 Answer: CHAR is a fixed-length character type, VARCHAR is a variable-length character type, and TEXT is used for large amounts of text data. CHAR pads values with spaces, while VARCHAR stores only the actual characters entered.
 
 #### ✅ 23. How do you use the BETWEEN operator in SQL?
-Answer: The BETWEEN operator is used to filter results within a specific range. For example: `SELECT * FROM table WHERE column BETWEEN value1 AND value2;`
+Answer: The BETWEEN operator is used to filter results within a specific range. For example: `SELECT * FROM product WHERE price BETWEEN 10 AND 20;`
+
+This query will select all product where price >=10 and price <=20.
 
 #### ✅ 24. Describe the use of the IN operator.
 Answer: The IN operator is used to filter results based on a list of specified values. For example: `SELECT * FROM table WHERE column IN (value1, value2, ...);`
 
 #### ✅ 25. Explain the use of wildcard characters in SQL.
-Answer: Wildcard characters like '%' and '_' are used in conjunction with the LIKE operator to perform pattern matching in SQL queries. '%' represents any sequence of characters, and '_' represents a single character.
+Answer: Wildcard characters like **'%' and '_'** are used in conjunction with the **LIKE** operator to perform pattern matching in SQL queries. 
+- '%' represents any sequence of characters
+- '_' represents a single character.
 
 #### ✅ 26. What is the purpose of the LIKE operator?
 Answer: The LIKE operator is used to search for a specified pattern in a column. It is often used with wildcard characters for flexible pattern matching.
@@ -140,6 +144,16 @@ Answer: Arithmetic operators (+, -, *, /) are used to perform mathematical opera
 
 #### ✅ 31. Explain how to use the CASE statement in SQL.
 Answer: The CASE statement is used to perform conditional logic in SQL queries. It can be used in SELECT, WHERE, and ORDER BY clauses to conditionally return values based on specified conditions.
+
+```sql
+SELECT OrderID, Quantity,
+CASE
+    WHEN Quantity > 30 THEN 'The quantity is greater than 30'
+    WHEN Quantity = 30 THEN 'The quantity is 30'
+    ELSE 'The quantity is under 30'
+END AS QuantityText
+FROM OrderDetails;
+```
 
 #### ✅ 32. How would you perform a self JOIN?
 Answer: A self JOIN is used to combine rows from the same table. You need to use an alias to differentiate between the two instances of the same table. For example: `SELECT a.column, b.column FROM table a JOIN table b ON a.id = b.related_id;`
