@@ -4,11 +4,35 @@
 Answer: SQL (Structured Query Language) is a domain-specific language used to manage and manipulate relational databases. It is employed for tasks such as querying data, updating records, inserting new data, and controlling database access.
 
 #### ✅ 2. Describe the difference between SQL and NoSQL databases.
-Answer: SQL databases are relational databases that use a structured schema, while NoSQL databases are non-relational and typically do not require a fixed schema. SQL databases use SQL for querying, whereas NoSQL databases use various query languages.
+Answer:
+| Feature                   | SQL Databases                 | NoSQL Databases              |
+|---------------------------|-------------------------------|------------------------------|
+| **Data Structure**         | Tabular (Relational)          | Flexible (Document, Key-Value, Column-Family, Graph) |
+| **Schema**                 | Strict schema                | Dynamic or Schema-less       |
+| **Query Language**         | SQL                           | Query language varies by type (e.g., MongoDB uses BSON queries) |
+| **Scaling**                | Vertical (scale-up)           | Horizontal (scale-out)       |
+| **Transaction Support**   | ACID properties (Atomicity, Consistency, Isolation, Durability) | Eventual consistency, often sacrificing ACID properties |
+| **Complex Transactions**   | Well-suited for complex transactions | May not support complex transactions across multiple documents/collections |
+| **Joins**                  | Supports complex joins        | Typically no or limited support for joins |
+| **Scalability**            | Can be challenging to scale horizontally | Designed for horizontal scalability |
+| **Data Relationship**      | Emphasizes relationships between tables | Emphasizes denormalization and relationships within documents or keys |
+| **Examples**               | MySQL, PostgreSQL, Oracle     | MongoDB, Cassandra, Redis    |
+| **Use Cases**              | Suitable for structured data and complex queries | Suitable for rapidly changing, semi-structured, or unstructured data |
+| **Consistency**            | Strong consistency            | Eventual consistency (varies by implementation) |
+| **Flexibility**            | Rigid schema                 | Dynamic schema               |
+| **Community Support**      | Well-established and mature   | Growing and diverse community |
+| **Learning Curve**         | May have a steeper learning curve due to relational model | Often considered easier to learn and implement |
+| **Security**               | Well-established security features | Security features depend on the specific NoSQL database |
+
 
 #### ✅ 3. What are the different types of SQL commands?
-Answer: SQL commands can be categorized into Data Query Language (DQL), Data Definition Language (DDL), Data Manipulation Language (DML), and Data Control Language (DCL).
+Answer: There are four types of database languages:
+  - **Data Definition Language (DDL)**: CREATE, ALTER, DROP, TRUNCATE, RENAME, etc. All these commands are used for updating the data that?s why they are known as Data Definition Language.
+  - **Data Manipulation Language (DML)**: SELECT, UPDATE, INSERT, DELETE, etc. These commands are used for the manipulation of already updated data that's why they are the part of Data Manipulation Language.
+  - **DATA Control Language (DCL)**: GRANT and REVOKE. These commands are used for giving and removing the user access on the database. So, they are the part of Data Control Language.
+  - **Transaction Control Language (TCL)**: COMMIT, ROLLBACK, and SAVEPOINT. These are the commands used for managing transactions in the database. TCL is used for managing the changes made by DML.
 
+    
 #### ✅ 4. Explain the purpose of the SELECT statement.
 Answer: The SELECT statement is used to retrieve data from one or more tables in a database. It allows you to specify the columns you want to retrieve and apply conditions to filter the results.
 
@@ -25,7 +49,21 @@ Answer: A primary key is a unique identifier for a record in a table. It ensures
 Answer: A foreign key is a column that establishes a link between data in two tables. It enforces referential integrity, ensuring that values in the foreign key column correspond to values in the primary key of another table.
 
 #### ✅ 9. How can you prevent SQL injections?
-Answer: To prevent SQL injections, use parameterized queries, input validation, and prepared statements. Avoid concatenating user inputs directly into SQL queries.
+Answer: 
+- **Use Parameterized Statements:**
+   Always use parameterized statements (prepared statements or parameterized queries) instead of dynamically constructing SQL queries with string concatenation.
+- **Input Validation:**
+   Validate and sanitize user inputs on the server side. Ensure that only expected data types and formats are accepted.
+
+- **Stored Procedures:**
+   Utilize stored procedures to encapsulate SQL logic on the database side. This can help prevent direct manipulation of SQL queries.
+
+- **ORMs and Parameterized APIs:**
+   Use Object-Relational Mapping (ORM) libraries or parameterized APIs provided by frameworks. These tools often handle input validation and parameterization automatically.
+
+- **Content Security Policy (CSP):**
+    Implement and enforce Content Security Policy headers to mitigate the risk of cross-site scripting (XSS) attacks, which can be used to launch SQL injection attacks.
+
 
 #### ✅ 10. What is normalization? Explain with examples.
 Answer: Normalization is the process of organizing data to reduce redundancy and improve data integrity. For example, breaking a table with customer information into separate tables for customers and orders.
