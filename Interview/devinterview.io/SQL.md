@@ -416,6 +416,17 @@ Answer:
 # Analytical SQL Questions
 
 81. How would you find the Nth highest salary from a table?
+Answer:
+- **dense_rank()**: The DENSE_RANK() function is used to compute the rank of a row within an ordered group of rows. It returns the rank of the row specified. The ranking in the DENSE_RANK() function is integer values starting from 1. The following query returns all rows with 3rd salary
+
+  `select * from (select *, dense_rank() over(order by salary desc) as rank from employee) AS E where rank = 3;`  
+
+- offset and limit: OFFSET says to skip that many rows before beginning to return rows. LIMIT says, no more than that many rows will be returned. The following query returns all rows with 3rd salary
+
+  `select * from employee where salary = (select distinct salary from employee order by salary desc offset 2 limit 1)`
+
+
+
 82. How do you count the number of occurrences of a specific value in a column?
 83. How can you calculate running totals in SQL?
 84. Explain how to reverse the contents of a column without using a reverse function.
