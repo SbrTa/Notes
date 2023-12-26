@@ -415,7 +415,7 @@ Answer:
 
 # Analytical SQL Questions
 
-81. How would you find the Nth highest salary from a table?
+#### ✅ 81. How would you find the Nth highest salary from a table?
 Answer:
 - **dense_rank()**: The DENSE_RANK() function is used to compute the rank of a row within an ordered group of rows. It returns the rank of the row specified. The ranking in the DENSE_RANK() function is integer values starting from 1. The following query returns all rows with 3rd salary
 
@@ -427,10 +427,17 @@ Answer:
 
 
 
-82. How do you count the number of occurrences of a specific value in a column?
-83. How can you calculate running totals in SQL?
-84. Explain how to reverse the contents of a column without using a reverse function.
-85. What approach do you use for creating a calendar table, and what are its uses?
+#### ✅ 82. How do you count the number of occurrences of a specific value in a column?
+Answer: `select count(id) from employee where salary = 10`
+
+#### ✅ 83. How can you calculate running totals in SQL?
+Answer: `select *, sum(salary) over (order by id) as running_total from employee`
+
+![image](https://github.com/SbrTa/Notes/assets/8649145/2173abd3-bcf7-4f23-a307-15f9f36d5491)
+
+
+#### ✅ 84. Explain how to reverse the contents of a column without using a reverse function.
+#### ✅ 85. What approach do you use for creating a calendar table, and what are its uses?
 
 
 # Data Manipulation and ETL
