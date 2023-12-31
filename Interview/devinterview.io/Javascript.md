@@ -2,16 +2,94 @@
 
 # JavaScript Fundamentals
 
-1. What are the data types present in JavaScript?
-2. What is the difference between null and undefined?
-3. How does JavaScript handle type coercion?
-4. Explain the concept of hoisting in JavaScript.
-5. What is the scope in JavaScript?
-6. What is the difference between == and === ?
-7. Describe closure in JavaScript. Can you give an example?
-8. What is the 'this keyword' and how does its context change?
-9. What are arrow functions and how do they differ from regular functions?
-10. What are template literals in JavaScript?
+#### ✅ 1. What are the data types present in JavaScript?
+JavaScript has the following data types:
+- Primitive Types: Number, String, Boolean, Undefined, Null, Symbol (added in ECMAScript 6)
+- Object
+
+#### ✅ 2. What is the difference between null and undefined?
+- `null` is a value that represents the intentional absence of any object value.
+- `undefined` is a primitive value automatically assigned to variables that have been declared but not assigned a value.
+
+#### ✅ 3. How does JavaScript handle type coercion?
+JavaScript performs type coercion when attempting operations between different types. It converts values to a common type based on certain rules. For example, when using the `+` operator, JavaScript may convert operands to strings for concatenation or to numbers for addition.
+
+#### ✅ 4. Explain the concept of hoisting in JavaScript.
+Hoisting is a behavior in JavaScript where variable and function declarations are moved to the top of their containing scope during the compilation phase. This allows you to use variables and functions before they are declared in the code.
+
+#### ✅ 5. What is the scope in JavaScript?
+Scope refers to the context in which variables are declared and accessed. JavaScript has two types of scope:
+- Global Scope: Variables declared outside any function are in the global scope.
+- Local Scope: Variables declared inside a function are in the local scope.
+
+#### ✅ 6. What is the difference between == and ===?
+- `==` is the equality operator, which performs type coercion if the operands are of different types.
+- `===` is the strict equality operator, which checks both value and type without coercion.
+
+#### ✅ 7. Describe closure in JavaScript. Can you give an example?
+A closure is a function that has access to variables from its outer (enclosing) scope, even after that scope has finished executing. Here's an example:
+
+```javascript
+function outerFunction() {
+  let outerVariable = 'I am from outer scope';
+
+  function innerFunction() {
+    console.log(outerVariable);
+  }
+
+  return innerFunction;
+}
+
+const closureExample = outerFunction();
+closureExample(); // Outputs: I am from outer scope
+```
+
+#### ✅ 8. What is the 'this' keyword and how does its context change?
+The `this` keyword in JavaScript refers to the object to which a function belongs in its execution context. The context of `this` changes based on how a function is invoked:
+- **Global Context:** In the global scope or when a function is not part of any object, `this` refers to the global object (e.g., `window` in a browser, `global` in Node.js).
+- **Method Context:** When a function is a method of an object, `this` refers to the object that owns the method.
+- **Function Context:** When a function is a standalone function (not a method), the value of `this` can be affected by how the function is called. In strict mode, it is `undefined` in this case; otherwise, it refers to the global object.
+- **Constructor Context:** When a function is used as a constructor with the `new` keyword, `this` refers to the newly created instance of the object.
+
+#### ✅ 9. What are arrow functions and how do they differ from regular functions?
+Arrow functions in JavaScript are a concise way to write functions, introduced in ECMAScript 6. They have a shorter syntax and differ from regular functions in a few key ways:
+- **No 'this' Binding:** Arrow functions do not have their own `this` binding; instead, they inherit `this` from the enclosing scope.
+- **No 'arguments' Binding:** Arrow functions also do not have their own `arguments` object; the `arguments` variable refers to the arguments of the enclosing function.
+- **Cannot be Used as Constructors:** Arrow functions cannot be used as constructors with the `new` keyword.
+- **No 'super' Binding:** Arrow functions do not have their own `super` binding.
+
+Example:
+```javascript
+// Regular function
+function regularFunction(x) {
+  return x * 2;
+}
+
+// Arrow function
+const arrowFunction = x => x * 2;
+```
+
+#### ✅ 10. What are template literals in JavaScript?
+Template literals, introduced in ECMAScript 6 (ES6), provide a more flexible and convenient way to create strings in JavaScript. They use backticks (`) as delimiters and support string interpolation, allowing you to embed expressions within the string using ${} syntax.
+
+Example:
+```
+const name = 'John';
+const age = 30;
+
+// Using template literals
+const greeting = `Hello, my name is ${name} and I am ${age} years old.`;
+
+console.log(greeting);
+// Outputs: Hello, my name is John and I am 30 years old.
+```
+
+Key features of template literals:
+- String Interpolation: Expressions inside ${} are evaluated and concatenated into the string.
+- Multiline Strings: Template literals support multiline strings without the need for escape characters.
+- Expression Evaluation: You can include any valid JavaScript expression inside ${} for dynamic content.
+
+Template literals offer a more readable and concise syntax compared to traditional string concatenation, especially when dealing with complex strings or embedding variables and expressions.
 
 
 # JavaScript Functions and Higher-Order Functions
