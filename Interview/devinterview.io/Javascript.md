@@ -116,10 +116,73 @@ Template literals offer a more readable and concise syntax compared to tradition
 
 # JavaScript Functions and Higher-Order Functions
 
-11. What is a higher-order function in JavaScript?
-12. Can functions be assigned as values to variables in JavaScript? 13. How do functional programming concepts apply in JavaScript?
-14. What are IIFES (Immediately Invoked Function Expressions)?
-15. How do you create private variables in JavaScript?
+#### ✅ 11. What is a higher-order function in JavaScript?
+A higher-order function is a function that takes one or more functions as arguments or returns a function as its result. This enables functions to be treated as first-class citizens in JavaScript, allowing for more flexible and expressive code. Examples of higher-order functions include `map`, `filter`, `reduce`, and functions that accept callbacks.
+
+#### ✅ 12. Can functions be assigned as values to variables in JavaScript?
+Yes, in JavaScript, functions are first-class citizens, which means they can be assigned as values to variables. These functions assigned to variables are often referred to as function expressions.
+
+```javascript
+const add = function(a, b) {
+  return a + b;
+};
+
+console.log(add(2, 3)); // Outputs: 5
+```
+
+#### ✅ 13. How do functional programming concepts apply in JavaScript?
+Functional programming concepts in JavaScript include:
+
+- **First-class Functions:** Functions can be treated as first-class citizens, assigned to variables, passed as arguments, and returned from other functions.
+
+- **Higher-Order Functions:** Functions that take other functions as arguments or return functions as results. Examples include `map`, `filter`, and `reduce`.
+
+- **Immutability:** Avoiding the modification of existing data. Instead of modifying data in place, new data structures are created with the desired changes.
+
+- **Pure Functions:** Functions that produce the same output for the same input and have no side effects. They don't modify external state.
+
+- **Recursion:** A technique where a function calls itself to solve a problem, often used in functional programming instead of traditional loops.
+
+Applying these concepts leads to more modular, maintainable, and predictable code. It encourages a declarative style of programming, emphasizing what should be done rather than how it should be done.
+
+#### ✅ 14. What are IIFES (Immediately Invoked Function Expressions)?
+An Immediately Invoked Function Expression (IIFE) is a JavaScript function that is defined and executed immediately after its creation. It is typically used to create a private scope for variables and functions, preventing them from polluting the global scope.
+
+Example:
+
+```javascript
+(function() {
+  // IIFE body
+  var localVar = 'I am private';
+  console.log(localVar);
+})();
+// localVar is not accessible here
+```
+
+#### ✅ 15. How do you create private variables in JavaScript?
+
+- Using Closures: Private variables can be achieved by defining them within a function scope and returning inner functions that have access to these variables. The outer function acts as a closure, preserving the state of the private variables.
+    ```
+    function createCounter() {
+      let count = 0;
+    
+      return {
+        increment: function() {
+          count++;
+        },
+        getValue: function() {
+          return count;
+        }
+      };
+    }
+    
+    const counter = createCounter();
+    counter.increment();
+    console.log(counter.getValue()); // Outputs: 1
+
+    // Undefined, since it is made private: 
+    console.log(counter.count); 
+    ```
 
 
 # JavaScript Objects and Prototypes
