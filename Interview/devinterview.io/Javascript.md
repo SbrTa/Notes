@@ -12,7 +12,29 @@ JavaScript has the following data types:
 - `undefined` is a primitive value automatically assigned to variables that have been declared but not assigned a value.
 
 #### ✅ 3. How does JavaScript handle type coercion?
-JavaScript performs type coercion when attempting operations between different types. It converts values to a common type based on certain rules. For example, when using the `+` operator, JavaScript may convert operands to strings for concatenation or to numbers for addition.
+Type coercion in JavaScript is the automatic conversion of values from one data type to another during operations. JavaScript is a loosely typed or dynamically typed language, meaning that variables do not have a fixed data type, and the interpreter can automatically convert values to a different type based on the context of the operation.
+
+There are two types of type coercion:
+
+- Implicit Type Coercion:
+  - JavaScript automatically converts values from one type to another without any explicit instruction from the developer.
+  - It often occurs during operations involving different data types, such as addition or comparison.
+  - The + operator, for example, can perform both addition and string concatenation, leading to implicit type coercion.
+  ```
+  var number = 5;
+  var stringNumber = "10";
+  var result = number + stringNumber;
+  console.log(result); // Outputs: "510"
+  ```
+
+- Explicit Type Coercion:
+  - Developers can explicitly convert values from one type to another using functions or operators.
+  - Examples include using Number(), String(), parseInt(), or other conversion functions.
+  ```
+  var stringNumber = "123";
+  var number = Number(stringNumber);
+  console.log(number); // Outputs: 123
+  ```
 
 #### ✅ 4. Explain the concept of hoisting in JavaScript.
 Hoisting is a behavior in JavaScript where variable and function declarations are moved to the top of their containing scope during the compilation phase. This allows you to use variables and functions before they are declared in the code.
