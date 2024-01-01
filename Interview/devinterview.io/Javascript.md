@@ -184,6 +184,33 @@ Example:
     console.log(counter.count); 
     ```
 
+- Using class: With the introduction of ECMAScript 6 (ES6), JavaScript supports the class syntax, and you can utilize it to achieve encapsulation and create private variables using closures.
+
+    ```
+    class Counter {
+      constructor() {
+        // Private variable
+        let count = 0;
+    
+        // Public methods that can access the private variable
+        // “this” keyword makes method / function stick to the main method
+        this.increment = function() {
+          count++;
+        };
+    
+        this.getValue = function() {
+          return count;
+        };
+      }
+    }
+    
+    const counter = new Counter();
+    counter.increment();
+    console.log(counter.getValue()); // Outputs: 1
+    
+    // Undefined, since it is made private: 
+    console.log(counter.count);
+    ```
 
 # JavaScript Objects and Prototypes
 
