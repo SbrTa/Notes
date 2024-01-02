@@ -214,7 +214,59 @@ Example:
 
 # JavaScript Objects and Prototypes
 
-16. How do you create an object in JavaScript?
+#### ✅ 16. How do you create an object in JavaScript?
+You can create an object in JavaScript using various methods:
+
+- **Object Literal:**
+  ```javascript
+  const person = {
+    name: 'John',
+    age: 30,
+    greet: function() {
+      console.log(`Hello, my name is ${this.name}`);
+    }
+  };
+  ```
+
+- **Object Constructor:**
+  ```
+  const person = new Object();
+  person.name = 'John';
+  person.age = 30;
+  person.greet = function() {
+    console.log(`Hello, my name is ${this.name}`);
+  };
+  ```
+
+- **Object.create():**
+  ```
+  const person = Object.create(null);
+  person.name = 'John';
+  person.age = 30;
+  person.greet = function() {
+    console.log(`Hello, my name is ${this.name}`);
+  };
+  ```
+
+- **Class Syntax (ES6):**
+  ```
+  class Person {
+    constructor(name, age) {
+      this.name = name;
+      this.age = age;
+    }
+    greet() {
+      console.log(`Hello, my name is ${this.name}`);
+    }
+  }
+  
+  const person = new Person('John', 30);
+  ```
+
+
+
+
+  
 17. What are prototypes in JavaScript?
 18. Explain prototypal inheritance.
 19. What is the difference between object literals and constructor functions?
