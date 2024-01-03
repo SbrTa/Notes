@@ -18,8 +18,8 @@ Example 2:
 var obj = {
     name:  "Alice",
     getName: function(){
-    console.log(this.name);
-  }
+      console.log(this.name);
+    }
 }
    
 obj.getName(); //Alice
@@ -33,9 +33,8 @@ Example 3:
 var obj = {
     name:  "Alice",
     getName: function(){
-    console.log(this.name);
-  }
-     
+      console.log(this.name);
+    } 
 }
        
 var getName = obj.getName;
