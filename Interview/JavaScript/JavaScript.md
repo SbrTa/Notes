@@ -52,7 +52,7 @@ The silly way to understand the “this” keyword is, whenever the function is 
 ## Explain Scope and Scope Chain in javascript.
 There are three types of scopes in JS:
 
-- Global Scope: Variables or functions declared in the global namespace have global scope, which means all the variables and functions having global scope can be accessed from anywhere inside the code.
+- **Global Scope**: Variables or functions declared in the global namespace have global scope, which means all the variables and functions having global scope can be accessed from anywhere inside the code.
     ```
     var globalVariable = "Hello world";
     
@@ -65,7 +65,7 @@ There are three types of scopes in JS:
     sendMessage2();  // Returns “Hello world”
     ```
 
-- Function Scope: Any variables or functions declared inside a function have local/function scope, which means that all the variables and functions declared inside a function, can be accessed from within the function and not outside of it.
+- **Function Scope**: Any variables or functions declared inside a function have local/function scope, which means that all the variables and functions declared inside a function, can be accessed from within the function and not outside of it.
     ```
     function awesomeFunction(){
       var a = 2;
@@ -79,7 +79,7 @@ There are three types of scopes in JS:
     multiplyBy2(); // Throws reference error since multiplyBy2 is written in local scope
     ```
 
-- Block Scope: Block scope is related to the variables declared using let and const. Variables declared with var do not have block scope. Block scope tells us that any variable declared inside a block { }, can be accessed only inside that block and cannot be accessed outside of it.
+- **Block Scope**: Block scope is related to the variables declared using let and const. Variables declared with var do not have block scope. Block scope tells us that any variable declared inside a block { }, can be accessed only inside that block and cannot be accessed outside of it.
     ```
     {
       let x = 45;
@@ -94,7 +94,7 @@ There are three types of scopes in JS:
     console.log(i); // Gives reference error since i cannot be accessed outside of the for loop block
     ```
 
-- Scope Chain: JavaScript engine also uses Scope to find variables. Let’s understand that using an example:
+**Scope Chain**: JavaScript engine also uses Scope to find variables. Let’s understand that using an example:
     ```
     var y = 24;
     
@@ -189,5 +189,156 @@ The javascript engine sees that the method push does not exist on the current ar
 
 Whenever the property or method is not found on the current object, the javascript engine will always try to look in its prototype and if it still does not exist, it looks inside the prototype's prototype and so on.
 
+
+## Explain call(), apply() and, bind() methods.
+
+**call():**
+- It’s a predefined method in javascript.
+- This method invokes a method (function) by specifying the owner object.
+
+Example 1:
+```
+function sayHello(){
+  return "Hello " + this.name;
+}
+var obj = {name: "Sandy"};       
+sayHello.call(obj);     
+// Returns "Hello Sandy"
+```
+- call() method allows an object to use the method (function) of another object.
+Example 2:
+```
+var person = {
+  age: 23,
+  getAge: function(){
+    return this.age;
+  }
+}        
+var person2 = {age:  54};
+person.getAge.call(person2);      
+// Returns 54  
+call() accepts arguments:
+function saySomething(message){
+  return this.name + " is " + message;
+}     
+var person4 = {name:  "John"};     
+saySomething.call(person4, "awesome");
+// Returns "John is awesome"
+```
+
+   
+**apply()**:
+- The apply method is similar to the call() method. The only difference is that, call() method takes arguments separately whereas, apply() method takes arguments as an array.
+
+```
+function saySomething(message){
+  return this.name + " is " + message;
+}        
+var person4 = {name:  "John"};
+saySomething.apply(person4, ["awesome"]);
+```
+
+**bind()**:
+- This method returns a new function, where the value of “this” keyword will be bound to the owner object, which is provided as a parameter.
+
+Example with arguments:
+```
+var bikeDetails = {
+    displayDetails: function(registrationNumber,brandName){
+    return this.name+ " , "+ "bike details: "+ registrationNumber + " , " + brandName;
+  }
+}
+   
+var person1 = {name:  "Vivek"};
+     
+var detailsOfPerson1 = bikeDetails.displayDetails.bind(person1, "TS0122", "Bullet");
+// Binds the displayDetails function to the person1 object
+        
+detailsOfPerson1();
+//Returns Vivek, bike details: TS0122, Bullet
+```
+
+## What are callbacks?
+
+## Differences between declaring variables using var, let and const.
+
+| Keyword         | Global Scope | Function Scope | Block Scope | Can Be Reassigned |
+|-----------------|--------------|----------------|-------------|---------------------|
+| `const`         | No           | Yes            | Yes         | No                  |
+| `let`           | No           | Yes            | Yes         | Yes                 |
+| `var`           | Yes          | Yes            | No          | Yes                 |
+
+
+**Global Scope**:
+
+```
+var variable1 = 23;
+let variable2 = 89;
+
+function catchValues(){
+  console.log(variable1); //23
+  console.log(variable2); //89
+  // Both the variables can be accessed anywhere since they are declared in the global scope
+}
+
+window.variable1; // Returns the value 23
+window.variable2; // Returns undefined
+```
+- The variables declared with the let keyword in the global scope behave just like the variable declared with the var keyword in the global scope.
+- Variables declared in the global scope with var and let keywords can be accessed from anywhere in the code.
+- But, there is one difference! Variables that are declared with the var keyword in the global scope are added to the window/global object. Therefore, they can be accessed using window.variableName.
+- Whereas, the variables declared with the let keyword are not added to the global object, therefore, trying to access such variables using window.variableName results in an error.
+
+**Functional scope**:
+- Variables are declared in a functional/local scope using var and let keywords behave exactly the same, meaning, they cannot be accessed from outside of the scope. 
+```
+function varVsLetFunction(){
+  let awesomeCar1 = "Audi";
+  var awesomeCar2 = "Mercedes";
+}
+
+console.log(awesomeCar1); // Throws an error
+console.log(awesomeCar2); // Throws an error
+```
+
+**Block scope**:
+
+```
+{
+  var variable3 = [1, 2, 3, 4];
+}
+console.log(variable3); // Outputs [1,2,3,4]
+for(var j = 0; j < 2; i++){
+  // Do something
+}
+console.log(j) // Outputs 2
+
+{
+  let variable4 = [6, 55, -1, 2];
+}
+console.log(variable4); // Throws error
+
+for(let i = 0; i < 2; i++){
+  //Do something
+}
+console.log(i); // Throws error
+```
+
+**Const**:
+
+```
+const x = {name:"Vivek"};
+x = {address: "India"}; // Throws an error
+x.name = "Nikhil"; // No error is thrown
+```
+
+## In JavaScript, how many different methods can you make an object?
+In JavaScript, there are several ways to declare or construct an object.
+- Object.
+- using Class.
+- create Method.
+- Object Literals.
+- using Function.
+- Object Constructor.
 
 
