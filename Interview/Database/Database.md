@@ -131,6 +131,7 @@ More on - https://www.geeksforgeeks.org/sql-join-set-1-inner-left-right-and-full
 Database transaction isolation levels define the degree to which one transaction must be isolated from the effects of other concurrent transactions. These levels ensure the consistency and integrity of the database during concurrent access.
 
 Transaction isolation level is defined by the following phenomena
+  - **Data Lose** 
   - **Dirty Reads**
     - A transaction reads data written by a concurrent uncommitted transaction.
     - For example, Let’s say transaction 1 updates a row and leaves it uncommitted, meanwhile, Transaction 2 reads the updated row. If transaction 1 rolls back the change, transaction 2 will have read data that is considered never to have existed.
