@@ -6,6 +6,12 @@
 **Answer:**
 Concurrency in programming refers to the ability of a system to handle multiple tasks or processes simultaneously. It differs from parallelism in that concurrency doesn't necessarily mean tasks are executed simultaneously; they may be interleaved or partially overlapping. Parallelism involves executing tasks simultaneously, typically on multiple processors or cores.
 
+Concurrency is when two or more tasks can start, run, and complete in overlapping time periods. It doesn't necessarily mean they'll ever both be running at the same instant. For example, multitasking on a single-core machine.
+
+Parallelism is when tasks literally run at the same time, e.g., on a multicore processor. 
+
+Parallelism can be achieved in single core hyperthreded processor. It's called instruction-level parallelism.
+
 #### ✅ 2. Can you explain race conditions and provide an example where one might occur?
 **Answer:**
 A race condition occurs when the behavior of a program depends on the relative timing of events, leading to unpredictable results. For example, consider two threads incrementing a shared counter without proper synchronization. Depending on the timing, both threads might read the current value, increment it, and write it back, resulting in a loss of increments.
