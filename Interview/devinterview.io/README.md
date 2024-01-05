@@ -5,7 +5,7 @@ Ace your next tech interview with confidence.
   - [100 Java interview questions.](https://github.com/SbrTa/Notes/blob/main/Interview/devinterview.io/Java.md)
   - [52 OOP interview questions.](https://github.com/SbrTa/Notes/blob/main/Interview/devinterview.io/OOP.md)
   - [100 Spring interview questions.](https://github.com/SbrTa/Notes/blob/main/Interview/devinterview.io/Spring.md)
-  - 100 SQL interview questions.
+  - [100 SQL interview questions.](https://github.com/SbrTa/Notes/blob/main/Interview/devinterview.io/SQL.md)
   - [100 Web Security interview questions.](https://github.com/SbrTa/Notes/blob/main/Interview/devinterview.io/Web%20Security.md)
   - 100 WebSockets interview questions.
 
