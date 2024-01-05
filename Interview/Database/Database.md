@@ -214,7 +214,16 @@ Concurrency control mechanisms ensure that transactions can execute concurrently
 A savepoint is a named entity that represents the state of data and schemas at a particular point within a unit of work. You can create savepoints within a transaction. If the transaction rolls back, changes are undone to the specified savepoint, rather than to the beginning of the transaction.
 
 
-#### ✅ 
+#### ✅ What is an Aggregate Function in SQL?
+An aggregate function in SQL returns one value after calculating multiple values of a column. We often use aggregate functions with the GROUP BY and HAVING clauses of the SELECT statement.
+
+There are 5 types of SQL aggregate functions:
+- Count()
+- Sum()
+- Avg()
+- Min()
+- Max()
+
 #### ✅ 
 #### ✅ 
 #### ✅ 
