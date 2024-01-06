@@ -237,15 +237,18 @@
 #### ✅ 25. What are the main differences between a List, Set, and Map in Java?
 **Answer:**
 - **List:**
-  - Ordered collection with duplicates allowed.
+  - Unordered collection
+  - Duplicates allowed.
   - Access elements by index.
 
 - **Set:**
-  - Unordered collection with no duplicates.
+  - Ordered collection
+  - No duplicates.
   - No indexing.
 
 - **Map:**
-  - Key-value pairs; no duplicates allowed.
+  - Key-value pairs
+  - Duplicates allowed.
   - Access elements by key.
 
 #### ✅ 26. How does a HashSet work internally in Java?
