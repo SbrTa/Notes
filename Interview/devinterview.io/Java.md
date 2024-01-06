@@ -237,12 +237,12 @@
 #### ✅ 25. What are the main differences between a List, Set, and Map in Java?
 **Answer:**
 - **List:**
-  - Unordered collection
+  - Can be ordered.
   - Duplicates allowed.
   - Access elements by index.
 
 - **Set:**
-  - Ordered collection
+  - Unordered collection
   - No duplicates.
   - No indexing.
 
