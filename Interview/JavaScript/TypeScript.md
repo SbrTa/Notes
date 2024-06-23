@@ -37,8 +37,33 @@ function add(a: number, b: number): number {
     return sum;
 }
 
-function calculate(a: number, b: number, calcFun: (a: number, b: number) => number) {
-    calcFun(a, b);
+function calculate(a: number, b: number, calcFn: (a: number, b: number) => number) {
+    calcFn(a, b);
 }
 calculate(1, 2, add)
+```
+
+## type alias keyword
+```
+type AddFnType = (a: number, b: number) => number;
+
+function add(a: number, b: number): number {
+    let sum = a+b;
+    return sum;
+}
+
+function calculate(a: number, b: number, calcFn: AddFnType) {
+    calcFn(a, b);
+}
+calculate(1, 2, add)
+```
+
+```
+type User = {
+    name: string;
+    age: number,
+    id: number | string;
+    isActive: boolean;
+};
+let user: User;
 ```
