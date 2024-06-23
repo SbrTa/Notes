@@ -110,6 +110,7 @@ let user: User;
 
 ## Merging types
 
+Using Type:
 ```
 type AppUser = {
     name: string;
@@ -128,3 +129,39 @@ appAdmin = {
     permissions: ['Create', 'Update']
 };
 ```
+
+
+Using interface:
+```
+interface AppUser {
+    name: string;
+    age: number;
+};
+
+interface Admin {
+    permissions: string[];
+};
+
+interface AppAdmin extends AppUser, Admin {};
+
+let appAdmin: AppAdmin;
+appAdmin = {
+    name: 'Alice',
+    age: 25,
+    permissions: ['Create', 'Update']
+};
+```
+
+## Literal types
+
+```
+let role: 'admin' | 'user';
+role = 'admin';
+role = 'user';
+role = 'editor'; //not allowed
+```
+
+## Type Guard , Type Narrowing
+
+## Generic type
+
