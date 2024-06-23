@@ -106,3 +106,25 @@ let user: User;
 
 
 ## type vs interface
+
+
+## Merging types
+
+```
+type AppUser = {
+    name: string;
+    age: number;
+};
+
+type Admin = {
+    permissions: string[];
+}
+
+let appAdmin: AppUser & Admin; // merging type
+
+appAdmin = {
+    name: 'Alice',
+    age: 25,
+    permissions: ['Create', 'Update']
+};
+```
