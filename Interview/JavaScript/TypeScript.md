@@ -44,6 +44,9 @@ calculate(1, 2, add)
 ```
 
 ## type alias keyword
+Define object type, function type or Union type.
+
+Function type:
 ```
 type AddFnType = (a: number, b: number) => number;
 
@@ -58,6 +61,7 @@ function calculate(a: number, b: number, calcFn: AddFnType) {
 calculate(1, 2, add)
 ```
 
+Object type:
 ```
 type User = {
     name: string;
@@ -67,3 +71,21 @@ type User = {
 };
 let user: User;
 ```
+
+## interface keyword
+Define Object type.
+
+```
+interface User {
+    name: string;
+    age: number,
+    id: number | string;
+    isActive: boolean;
+};
+let user: User;
+```
+
+NB: You can actually use interface to also define function types, but you cann't use interface to define union types. Which you can define with type.
+
+
+## type vs interface
