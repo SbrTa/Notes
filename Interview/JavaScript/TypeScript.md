@@ -85,7 +85,24 @@ interface User {
 let user: User;
 ```
 
-NB: You can actually use interface to also define function types, but you cann't use interface to define union types. Which you can define with type.
+Notes:
+- You can actually use interface to also define function types, but you cann't use interface to define union types. Which you can define with type.
+- Class can implement interface as a contract.
+- interface can be extended. You can add properties later. It'scalled declaration merging.
+
+Declaration merging:
+```
+interface User {
+    name: string;
+    age: number,
+    id: number | string;
+    isActive: boolean;
+};
+interface User {
+    nid: string;
+};
+let user: User;
+```
 
 
 ## type vs interface
