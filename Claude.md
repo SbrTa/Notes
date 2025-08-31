@@ -11,7 +11,7 @@
 - ```\compact``` - clears conversation history, but keep a summary in context
 - ```\clear``` - clears conversation history and free up context
 - Custom command: you can create your own custom command and use it when required.
-  - project_path/.claude/commands/audit.md
+  - Basic command: project_path/.claude/commands/audit.md
     ```
     //audt.md
     The goal is to update any vulnerable dependency.
@@ -20,7 +20,26 @@
     2. Runs npm audit fix to apply updates
     3. Runs tests to verify the updates didn't break anything
 
-    // now use /audit in claude
+    // now use "/audit"
     ```
+  - Commands with Arguments: project_path/.claude/commands/write_tests.md
+    ```
+    Write comprehensive tests for: $ARGUMENTS
+
+    Testing conventions:
+    * Use Vitests with React Testing Library
+    * Place test files in a __tests__ directory in the same folder as the source file
+    * Name test files as [filename].test.ts(x)
+    * Use @/ prefix for imports
+
+    Coverage:
+    * Test happy paths
+    * Test edge cases
+    * Test error states
+
+    // now use "/write_tests the use-auth.ts file in the hooks directory"
+    ```
+  
+    
     
 - sdsdf
